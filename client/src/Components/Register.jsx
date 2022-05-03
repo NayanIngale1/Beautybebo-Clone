@@ -5,10 +5,24 @@ import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import "./Register.css"
+import GoogleButton from 'react-google-button';
 
 export const Register = () => {
 	return (
 		<div>
+			<center>
+				<h4>CREATE NEW CUSTOMER ACCOUNT</h4>
+				<GoogleButton
+					style={{
+						backgroundColor: 'rgb(221,75,57)',
+						borderRadius:"5px",
+						height: "50px",
+						fontSize:"17px",
+						margin:"30px"
+					}}
+				/>
+				<h5>-- OR --</h5>
+			</center>
 			<Container>
 				<Form>
 					<Row className="mb-3">
@@ -41,11 +55,7 @@ export const Register = () => {
 						<Form.Label>Confirm Password</Form.Label>
 						<Form.Control type="password" />
 					</Form.Group>
-					<Button
-						variant="secondary"
-						size="md"
-						type="submit"
-					>
+					<Button variant="secondary" size="md" type="submit">
 						CREATE AN ACCOUNT
 					</Button>
 				</Form>
