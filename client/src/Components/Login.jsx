@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Row } from "react-bootstrap";
-import { Col } from "react-bootstrap";
+
 import { useNavigate } from "react-router-dom";
 
 export const Login=()=>{
@@ -13,7 +13,7 @@ export const Login=()=>{
     }
     return (
 			<div>
-				<Row>
+				<Row md={4}>
 					<Container>
 						<h5>REGISTERED CUSTOMERS</h5>
 						<hr />
@@ -30,7 +30,12 @@ export const Login=()=>{
 								<Form.Label>Password</Form.Label>
 								<Form.Control type="password" />
 							</Form.Group>
-							<Button variant="secondary" size="md" type="submit">
+							<Button
+								variant="secondary"
+								size="md"
+								type="submit"
+								className="bg"
+							>
 								SIGN IN
 							</Button>
 							<p>Forgot Your Password?</p>
@@ -43,7 +48,13 @@ export const Login=()=>{
 							Creating an account has many benefits: check out faster,
 							keep more than one address, track orders and more.
 						</p>
-						<Button variant="secondary" size="md" type="submit" onClick={handlenavigate}>
+						<Button
+							variant="secondary"
+							size="md"
+							type="submit"
+							onClick={handlenavigate}
+							className="bg"
+						>
 							CREATE AN ACCOUNT
 						</Button>
 					</Container>

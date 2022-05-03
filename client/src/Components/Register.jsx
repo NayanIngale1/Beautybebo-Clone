@@ -55,7 +55,7 @@ export const Register = () => {
 						<Form.Label>Confirm Password</Form.Label>
 						<Form.Control type="password" />
 					</Form.Group>
-					<Button variant="secondary" size="md" type="submit">
+					<Button variant="secondary" size="md" type="submit" className='bg'>
 						CREATE AN ACCOUNT
 					</Button>
 				</Form>

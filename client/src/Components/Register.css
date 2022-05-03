@@ -9,3 +9,15 @@
 .GoogleButton{
     height: 20px;
 }
+.bg{
+    background-color: rgb(68,68,68);
+}
+.bg:hover{
+    background-color: rgb(221,2,133);
+}
+
+@media only screen and (min-width:0px) and (max-width:772px){
+    .container{
+        width: 92%;
+    }
+}
