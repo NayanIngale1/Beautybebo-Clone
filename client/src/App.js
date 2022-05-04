@@ -1,9 +1,10 @@
 import "./App.css";
+import { CartPage } from "./Components/CartPage/CartPage";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World..!""</h1>
+      <CartPage></CartPage>
     </div>
   );
 }
