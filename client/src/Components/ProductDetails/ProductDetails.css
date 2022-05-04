@@ -26,15 +26,15 @@
   min-width: 50%;
   padding: 20px;
 }
-.price {
+.prod_priceDiv {
   display: flex;
   gap: 10px;
 }
-.price p {
+.prod_priceDiv p {
   color: green;
   font-weight: 600;
 }
-.price div:last-child {
+.prod_priceDiv div:last-child {
   font-size: 12px;
 }
 
@@ -72,7 +72,7 @@
   background-color: #f331a5;
 }
 
-.wishList {
+.wishList_btn {
   padding: 8px 14px;
   color: white;
   background-color: #5b5b5b;
@@ -81,7 +81,7 @@
   outline: none;
   font-size: 18px;
 }
-.wishList:hover {
+.wishList_btn:hover {
   background-color: #dd0285;
 }
 
@@ -172,6 +172,8 @@
   font-size: 14px;
   line-height: 1.4;
 }
+
+/* ---------------------media quiries -----------*/
 @media (max-width: 768px) {
   .productinfo {
     flex-direction: column;

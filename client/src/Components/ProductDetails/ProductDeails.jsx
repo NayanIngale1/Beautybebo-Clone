@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import "./ProductDetails.css";
 
 export const ProductDeails = (props) => {
-
-
   const prod = {
-
     id: 1,
     name: "Dove Deeply Nourishing Body Wash",
     description:
@@ -27,8 +24,9 @@ export const ProductDeails = (props) => {
     how_to_use:
       "Pour a quarter-sized drop of Dove body wash onto a loofah or pouf and work it into a lather, Gently massage yourself all over, rinse well.",
     review: "3.5",
-    category:'',
-    sub_category: ''
+    category: "",
+    sub_category: "",
+    offer: "10%",
   };
 
   const [isActive1, setIsActive1] = useState(true);
@@ -44,7 +42,7 @@ export const ProductDeails = (props) => {
             <img src={prod.image} alt="" />
           </div>
           <div className="details">
-            <h3 style={{ fontSize:"25px" }}>
+            <h3 style={{ fontSize: "25px" }}>
               {prod.name}
               <span style={{ fontWeight: "200" }}> ( {prod.weight} )</span>
             </h3>
@@ -69,7 +67,7 @@ export const ProductDeails = (props) => {
             >
               <span class="fa-solid fa-check"></span> In Stock
             </p>
-            <div className="price">
+            <div className="prod_priceDiv">
               {" "}
               <div className="firstPrice">
                 <span class="fa-solid fa-indian-rupee-sign"></span>{" "}
@@ -78,7 +76,7 @@ export const ProductDeails = (props) => {
               <div className="newPrice">
                 <span class="fa-solid fa-indian-rupee-sign"></span> {prod.price}
               </div>
-              <p>10% off</p>
+              <p>{prod.offer} off</p>
               <div>(Inclusive of all taxes)</div>
             </div>
             <div className="brand">Brand : {prod.brand}</div>
@@ -87,7 +85,7 @@ export const ProductDeails = (props) => {
               <button className="addCart">
                 <span class="fa-solid fa-basket-shopping"></span> Add to cart
               </button>
-              <button className="wishList">
+              <button className="wishList_btn">
                 <span class="fa-solid fa-heart"></span>
               </button>
             </div>
