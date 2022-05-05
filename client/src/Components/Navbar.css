@@ -1,0 +1,14 @@
+.containerflex{
+    display: flex;
+}
+.bgcolor{
+    background-color: rgb(221,2,133);
+    color: white;
+}
+
+@media only screen and (min-width:0px) and (max-width:772px){
+    .containerflex{
+        display: flex;
+        flex-direction: column;
+    }
+}
