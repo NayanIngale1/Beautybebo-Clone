@@ -58,6 +58,7 @@
 
 import React from 'react';
 import './Header.css';
+import { AllCategroies } from './DropDownItems';
 
 export const Header = () => {
   return (
@@ -72,21 +73,20 @@ export const Header = () => {
             <div>
               <div className="main-input">
                 <select>
-                  <option>asdfsd</option>
-                  <option>asdfsd</option>
-                  <option>asdfsd</option>
-                  <option>asdfsd</option>
+                  {AllCategroies.map((e) => {
+                    return <option>{e.title}</option>;
+                  })}
                 </select>
                 <span>|</span>
-                <input type="text" />
+                <input type="text" placeholder="Enter your search..." />
                 <button>Search</button>
               </div>
             </div>
           </form>
         </div>
         <div className="main-nav-profile">
-          <div className="a">a</div>
-          <div className="my">
+          <div className="like-icon">a</div>
+          <div className="user-icon">
             <div className="a">a</div>
             <div>My acount</div>
           </div>

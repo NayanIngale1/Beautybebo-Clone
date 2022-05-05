@@ -782,3 +782,180 @@ export const Fragrance = [
     cName: 'dropdown-link',
   },
 ];
+
+export const AllCategroies = [
+  {
+    title: 'All Categories',
+  },
+  {
+    title: '--Makeup',
+  },
+  {
+    title: '--Face',
+  },
+  {
+    title: '------Foundation',
+  },
+  {
+    title: '------Blush',
+  },
+  {
+    title: '------Highlighters',
+  },
+  {
+    title: '------Concealer',
+  },
+  {
+    title: '------Compact & Powder',
+  },
+  {
+    title: '------Face Primer',
+  },
+  {
+    title: '------Makeup Remover',
+  },
+  {
+    title: '------Contour',
+  },
+  {
+    title: '------Bronzer',
+  },
+  {
+    title: '------BB Cream',
+  },
+  {
+    title: '------Loose Powder',
+  },
+  {
+    title: '------Setting Spray',
+  },
+  {
+    title: '------Makeop Kits',
+  },
+  {
+    title: '------CC Cream',
+  },
+  {
+    title: '------Eye',
+  },
+  {
+    title: '----Eye',
+  },
+  {
+    title: '------Eye Shadow',
+  },
+  {
+    title: '------Eyeliner',
+  },
+  {
+    title: '------False Eyelashes',
+  },
+  {
+    title: '------Mashcara',
+  },
+  {
+    title: '------Eye Brow Enhancers',
+  },
+  {
+    title: '------Kajal',
+  },
+  {
+    title: '------Under Eye Concealer',
+  },
+  {
+    title: '------Eye Makeup Remover',
+  },
+  {
+    title: '------Contact Lenses',
+  },
+  {
+    title: '------Eye Primer',
+  },
+  {
+    title: '------Eye-Palettes',
+  },
+  {
+    title: '------Eye Kit',
+  },
+  {
+    title: '----Lips',
+  },
+  {
+    title: '------Lipstick',
+  },
+  {
+    title: '------Liquid Lipstick',
+  },
+  {
+    title: '------Lip Liner',
+  },
+  {
+    title: '------Lip Gloss',
+  },
+  {
+    title: '------Lip Balm',
+  },
+  {
+    title: '------Lip Crayon',
+  },
+  {
+    title: '------Lip Stain',
+  },
+  {
+    title: '------Lip Plumper',
+  },
+  {
+    title: '----Nails',
+  },
+  {
+    title: '------Nail Polish',
+  },
+  {
+    title: '------Manicure & Pedicure Kits',
+  },
+  {
+    title: '------Nail Care',
+  },
+  {
+    title: '------Nail Polish Sets',
+  },
+  {
+    title: '------Nail Art Kits',
+  },
+  {
+    title: '------Nail Polish Remover',
+  },
+  {
+    title: '----Tools brushes',
+  },
+  {
+    title: '------Face Brush',
+  },
+  {
+    title: '------Makeup Pouches',
+  },
+  {
+    title: '------Sponges & Applicators',
+  },
+  {
+    title: '------Eye Brush',
+  },
+  {
+    title: '------Blush Brush',
+  },
+  {
+    title: '------ETweezersye',
+  },
+  {
+    title: '------Lip Brush',
+  },
+  {
+    title: '------Eyelash Curlers',
+  },
+  {
+    title: '--------Brush Sets',
+  },
+  {
+    title: '------Sharpeners',
+  },
+];

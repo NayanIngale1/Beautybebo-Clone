@@ -7,11 +7,9 @@
 }
 .main-nav-profile {
   display: flex;
-  /* align-items: right; */
   justify-content: space-between;
   gap: 18px;
-  /* border: 1px solid red; */
-  /* width: 25%; */
+  margin-top: 0.9rem;
 }
 .a {
   width: 40px;
@@ -28,7 +26,7 @@
   justify-content: space-between;
   border: 1px solid lightgray;
   width: 603px;
-  margin-top: 1.6rem;
+  margin-top: 0.9rem;
 }
 .main-input > input {
   width: 70%;
@@ -46,7 +44,29 @@
   padding: 0.4rem;
   outline: none;
   border: none;
+  background-color: rgb(221, 2, 133);
 }
 .main-nav-middle {
   align-items: center;
+  /* border: 1px solid red; */
+}
+.user-icon {
+  display: flex;
+  gap: 0.4rem;
+}
+.user-icon > div:nth-child(2) {
+  color: black;
+}
+.main-input > span {
+  margin: 4px 20px 4px 20px;
+  color: lightgray;
+}
+select > option {
+  color: lightgray;
+}
+select {
+  color: lightgray;
+}
+input {
+  color: lightgray;
 }
