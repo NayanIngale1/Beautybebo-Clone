@@ -1,0 +1,39 @@
+.banner2maindiv{
+    display: flex;
+justify-content: space-between;
+margin: 20px 0px;
+width: 100%;
+}
+.banner2maindiv >  div{
+    width: 50%;
+}
+.banner2maindiv >  div >img{
+    width: 100%;
+}
+.banner3{
+    width: 100%;
+    margin: 10px 0px;
+}
+.banner3 > img{
+    width: 100%;
+}
+
+.banner1{
+     width: 100%;
+}
+.banner1 > img{
+    width: 100%;
+}
+@media screen and (max-width: 750px) {
+    .banner2maindiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .banner2maindiv >  div{
+        width: 100%;
+    }
+    .banner2maindiv >  div > img{
+        width: 100%;
+    }
+  }
