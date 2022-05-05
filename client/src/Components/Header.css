@@ -1,0 +1,52 @@
+.main-nav {
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid pink;
+}
+.main-nav-profile {
+  display: flex;
+  /* align-items: right; */
+  justify-content: space-between;
+  gap: 18px;
+  /* border: 1px solid red; */
+  /* width: 25%; */
+}
+.a {
+  width: 40px;
+  height: 50%;
+  border: 1px solid grey;
+}
+.my {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.main-input {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  width: 603px;
+  margin-top: 1.6rem;
+}
+.main-input > input {
+  width: 70%;
+  outline: none;
+  border: none;
+}
+.main-input > select {
+  width: 28%;
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+}
+.main-input > button {
+  width: 9%;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+}
+.main-nav-middle {
+  align-items: center;
+}

@@ -4,24 +4,27 @@ import { NavDropdown } from 'react-bootstrap';
 import { Navbar } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { Offcanvas } from 'react-bootstrap';
-import { Face } from './DropDownItems';
-import { eye } from './DropDownItems';
-import { ToolsBrushes } from './DropDownItems';
-import { Nails } from './DropDownItems';
-import { BodyCare } from './DropDownItems';
-import { FaceCare } from './DropDownItems';
-import { HairCare } from './DropDownItems';
-import { HairLoss } from './DropDownItems';
-import { BathBody } from './DropDownItems';
-import { BathingAccessories } from './DropDownItems';
-import { BathShower } from './DropDownItems';
-import { BabyCare } from './DropDownItems';
-import { MomCare } from './DropDownItems';
-import { NaturalHairCare } from './DropDownItems';
-import { NaturalSkinCare } from './DropDownItems';
-import { Fragrance } from './DropDownItems';
-import { EyeCare } from './DropDownItems';
-import { Lips } from './DropDownItems';
+import {
+  Face,
+  eye,
+  ToolsBrushes,
+  Nails,
+  BodyCare,
+  FaceCare,
+  HairCare,
+  HairLoss,
+  BathBody,
+  BathingAccessories,
+  BathShower,
+  BabyCare,
+  MomCare,
+  NaturalHairCare,
+  Fragrance,
+  EyeCare,
+  Lips,
+  NaturalSkinCare,
+} from './DropDownItems';
+
 import './Navbar.css';
 
 export const Navbars = () => {
