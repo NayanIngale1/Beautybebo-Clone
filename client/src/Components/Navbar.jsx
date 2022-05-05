@@ -8,20 +8,139 @@ import "./Navbar.css"
 
 export const Navbars = () => {
 	const Face = [
-		'BB cream',
-		'Brush',
-		'Bronzer',
-		'CC cream',
-		'Contour',
-		'Counceler',
-		'Compact Powder',
-		'Face Primer',
-		'Foundation',
-		'Highlights',
-		'Loose Powder',
-		'Makeup Kits'
+		{
+			title: 'BB Cream',
+			path: '/makeup/face/bb-cream',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Blush',
+			path: '/makeup/face/blush',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Bronzer',
+			path: '/makeup/face/bronzer',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'CC Cream',
+			path: '/makeup/face/cc-cream',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Contour',
+			path: '/makeup/face/contour',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Concealer',
+			path: '/makeup/face/concealer',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Compact & Powder',
+			path: '/makeup/face/compact-powder',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Face Primer',
+			path: '/makeup/face/face-primer',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Foundation',
+			path: '/makeup/face/foundation',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Highlighters',
+			path: '/makeup/face/highlighters',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Loose Poweder',
+			path: '/makeup/face/loose-poweder',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Makeup Kits',
+			path: '/makeup/face/makeup-kits',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Makeup Remover',
+			path: '/makeup/face/makeup-remover',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Setting Spray',
+			path: '/makeup/face/setting-spray',
+			cName: 'dropdown-link',
+		},
 	];
-	const eye =["Contact Lenses","Eye Kit","Eyeliner","Eye Shadow", "Eye Primer","Eye-Palettes","Eye Makeup Remover"]
+	const eye = [
+		{
+			title: 'Contact Lenses',
+			path: '/makeup/eye/contact-lenses',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eye Kit',
+			path: '/makeup/eye/eye-kit',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eyeliner',
+			path: '/makeup/eye/eyeliner',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eye Shadow',
+			path: '/makeup/eye/eye-shadow',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eye Primer',
+			path: '/makeup/eye/eye-primer',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eye-Palettes',
+			path: '/makeup/eye/eye-palettes',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eye Makeup Remover',
+			path: '/makeup/eye/eye-makeup-remover',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Eye Brow Enhancers',
+			path: '/makeup/eye/eye-brow-enhancers',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'False Eyelashes',
+			path: '/makeup/eye/false-eyelashes',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Kajal',
+			path: '/makeup/eye/kajal',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Mascara',
+			path: '/makeup/eye/mascara',
+			cName: 'dropdown-link',
+		},
+		{
+			title: 'Under Eye Concealer',
+			path: '/makeup/eye/under-eye-concealer',
+			cName: 'dropdown-link',
+		},
+	];
 	return (
 		<div>
 			<Link to="/Register">Register</Link>
@@ -44,29 +163,29 @@ export const Navbars = () => {
 									title="MAKEUP"
 									id={`offcanvasNavbarDropdown-expand-sm`}
 									style={{
-										color:"white"
+										color: 'white',
 									}}
 								>
 									<div className="containerflex">
 										<div>
-											<NavDropdown.Item href="#action3">
+											<NavDropdown.Item href="">
 												<h4>Face</h4>
 											</NavDropdown.Item>
 
 											{Face.map((e) => (
-												<NavDropdown.Item href="#action3">
-													{e}
+												<NavDropdown.Item href={e.path}>
+													{e.title}
 												</NavDropdown.Item>
 											))}
 										</div>
 										<div>
-											<NavDropdown.Item href="#action3">
+											<NavDropdown.Item href="">
 												<h4>Eye</h4>
 											</NavDropdown.Item>
 
 											{eye.map((e) => (
-												<NavDropdown.Item href="#action3">
-													{e}
+												<NavDropdown.Item href={e.path}>
+													{e.title}
 												</NavDropdown.Item>
 											))}
 										</div>
