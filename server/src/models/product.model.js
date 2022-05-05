@@ -17,7 +17,8 @@ const productSchema = new mongoose.Schema(
         address_of_mfg: { type: String, required: true },
         Weight: { type: String, required: true },
         how_to_use: { type: String, required: true },
-        review: { type: Number, required: true },    
+        review: { type: Number, required: true }, 
+        skin_type: { type: String, require: true },
     },
     {
         timestamps: true,
