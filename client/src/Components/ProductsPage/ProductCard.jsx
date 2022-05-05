@@ -19,14 +19,16 @@ export const ProductCard = (props) => {
             <span style={{ color: "#f0b43e" }} class="fa-solid fa-star"></span>
           </div>
           <div className="prod_cardPriceDiv">
-            <div className="firstPrice">
-              <span class="fa-solid fa-indian-rupee-sign"></span>{" "}
-              {prod.strickthrough_price}
-            </div>
+            {prod.strickthrough_price ? (
+              <div className="firstPrice">
+                <span class="fa-solid fa-indian-rupee-sign"></span>{" "}
+                {prod.strickthrough_price}
+              </div>
+            ) : null}
             <div className="newPrice">
               <span class="fa-solid fa-indian-rupee-sign"></span> {prod.price}
             </div>
-            <p>{prod.offer} off</p>
+            {prod.offer ? <p>{prod.offer} off</p> : null}
           </div>
           <div className="prod_cardButtonDiv">
             <button className="card_addCart">
@@ -36,6 +38,9 @@ export const ProductCard = (props) => {
               <span class="fa-solid fa-heart"></span>
             </button>
           </div>
+        </div>
+        <div className="hoverEye">
+          <span class="fa-solid fa-eye"></span>
         </div>
       </div>
     </>

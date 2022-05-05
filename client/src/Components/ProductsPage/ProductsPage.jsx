@@ -9,9 +9,13 @@ export const ProductsPage = () => {
   const [openbrand, setOpenbrand] = useState(false);
   //   const [openbrand, setOpenbrand] = useState(false);
   const [prodData, setProdData] = useState([]);
+  const [prodloading, setProdloading] = useState(true);
 
   useEffect(() => {
     getProdData();
+    setTimeout(() => {
+      setProdloading(false);
+    }, 1300);
   }, []);
 
   const getProdData = () => {
@@ -19,7 +23,7 @@ export const ProductsPage = () => {
       .then((res) => res.json())
       .then((res) => {
         setProdData(res);
-        console.log("res:", res);
+        // console.log("res:", res);
       });
   };
   console.log("prodData:", prodData);
@@ -235,11 +239,27 @@ export const ProductsPage = () => {
               </div>
             </div>
           </div>
-          <div className="products_grid">
-            {prodData.map((e) => (
-              <ProductCard prod={e} />
-            ))}
-          </div>
+          {prodloading ? (
+            <div
+              style={{
+                fontWeight: "900",
+                fontSize: "30px",
+                height: "500px",
+                width: "100 %",
+                textAlign: "center",
+                margin: "20px auto",
+                color: "#dd0285",
+              }}
+            >
+              Loading....
+            </div>
+          ) : (
+            <div className="products_grid">
+              {prodData.map((e) => (
+                <ProductCard prod={e} />
+              ))}
+            </div>
+          )}
           <div className="sort_and_pagination">
             <div className="sort_div">
               Sort:{" "}
