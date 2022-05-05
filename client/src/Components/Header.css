@@ -70,3 +70,48 @@ select {
 input {
   color: lightgray;
 }
+.main-nav-profile > div {
+  margin-bottom: 1rem;
+}
+.like-icon {
+  width: 2.4rem;
+  border: 1px solid pink;
+  margin-top: 0.3rem;
+}
+.user-icon-pic {
+  width: 2.4rem;
+  border: 1px solid pink;
+  margin-top: 0.3rem;
+}
+.user-icon :hover {
+  background-color: rgb(221, 2, 133);
+  cursor: pointer;
+}
+.main-nav-profile :nth-child(1) :hover {
+  background-color: rgb(221, 2, 133);
+  cursor: pointer;
+}
+.user-icon > span {
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 992px) {
+  .main-input select,
+  span {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .main-input select,
+  span {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
