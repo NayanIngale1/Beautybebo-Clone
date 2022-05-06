@@ -5,10 +5,11 @@
 }
 
 /************* TOP DIV ***************/
-#CartPage{
+#CartPage {
     display: flex;
     width: 100%;
 }
+
 #CartContent {
     /* border: 1px solid black; */
     width: 46%;
@@ -38,6 +39,10 @@
     width: 22%;
     display: flex;
     justify-content: space-between;
+}
+
+.PriceHead {
+    display: none;
 }
 
 #price_head {
@@ -121,12 +126,13 @@
 
 .Cart_Img_Div {
     border: 1px solid #DDDDDD;
-    height: 90%;
-    width: 27%;
+    height: 150px;
+    width: 150px;
 }
 
 .Cart_Img_Div img {
     height: 100%;
+    /* width: 100%; */
 }
 
 .Cart_Img_Div:hover {
@@ -146,6 +152,11 @@
     cursor: pointer;
 }
 
+.image_title {
+    display: flex;
+    margin: 10px 0px;
+}
+
 .CartPriceDiv {
     /* border: 1px solid black; */
     width: 25%;
@@ -163,13 +174,25 @@
 
 .Cart_Qty_Div {
     border: 1px solid #DDDDDD;
-    width: 47px;
+    width: 40px;
     height: 35px;
-    /* margin: 30px 10px 142px; */
+    margin: 0px 0px 0px -20px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(102, 102, 102)
+}
+
+.Cart_Qty_Div input {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+}
+
+.Cart_Qty_Div input:focus {
+    outline: none;
 }
 
 .Cart_Subtotal_Div {
@@ -253,50 +276,58 @@
     justify-content: space-between;
     padding: 8px;
 }
-#enter_destination{
+
+#enter_destination {
     color: #666666;
     font-size: 70%;
     padding: 5px 3px 10px 3px;
 }
-#country_div{
-color: #666666;
-font-size: 80%;
-font-weight: 600;
-padding: 10px 3px 3px 0px;
+
+#country_div {
+    color: #666666;
+    font-size: 80%;
+    font-weight: 600;
+    padding: 10px 3px 3px 0px;
 }
-#country{
+
+#country {
     width: 99%;
     padding: 3px;
     border: 1px solid #DDDDDD;
     color: #666666;
     padding: 3px;
 }
-#state_div{
+
+#state_div {
     padding: 12px 3px 3px 0px;
     color: #666666;
     font-size: 82%;
     font-weight: 600;
     /* border: 1px solid black; */
 }
-#postalCode_Div{
+
+#postalCode_Div {
     color: #666666;
     font-size: 80%;
     font-weight: 600;
     /* border: 1px solid black; */
     padding: 12px 3px 3px 0px;
 }
-#postCode{
+
+#postCode {
     width: 99%;
     height: 30px;
     padding: 3px;
     border: 1px solid #DDDDDD;
 }
-#state{
+
+#state {
     border: 1px solid #DDDDDD;
     padding: 5px 0px;
     color: #666666;
 }
-#best_way{
+
+#best_way {
     /* border: 1px solid black; */
     color: #666666;
     width: 60%;
@@ -305,13 +336,15 @@ padding: 10px 3px 3px 0px;
     font-weight: 600;
     margin: 10px 5px 10px 0px;
 }
-#best_way_input_div{
+
+#best_way_input_div {
     margin: 5px 0px;
     font-size: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 #shipping {
     width: 75%;
 }
@@ -364,17 +397,20 @@ padding: 10px 3px 3px 0px;
     justify-content: space-between;
     padding: 5px 8px;
 }
-#Enter_discount{
+
+#Enter_discount {
     font-size: 80%;
     font-weight: 600;
     color: #666666;
 }
-#Enter_discount_inpt{
+
+#Enter_discount_inpt {
     width: 99%;
     padding: 8px 5px;
     border: 1px solid #DDDDDD;
 }
-#apply_discount_btn{
+
+#apply_discount_btn {
     border: 1px solid transparent;
     height: 35px;
     font-size: 70%;
@@ -383,9 +419,11 @@ padding: 10px 3px 3px 0px;
     background-color: #666666;
     color: white;
 }
-#apply_discount_btn:hover{
-    background-color:#DD0285
+
+#apply_discount_btn:hover {
+    background-color: #DD0285
 }
+
 #PROCEED_DIV {
     border-top: 1px solid #DDDDDD;
     padding: 10px;
@@ -403,4 +441,189 @@ padding: 10px 3px 3px 0px;
 
 #PROCEED_DIV button:hover {
     background-color: #444444;
+}
+
+@media only screen and (max-width: 1440px) {
+
+    #CartContent {
+        /* border: 1px solid black; */
+        width: 60%;
+        margin: 1% 1% 1% 5%;
+    }
+
+    #summary {
+        border: 1px solid #DDDDDD;
+        width: 30%;
+        height: max-content;
+        text-align: left;
+        margin: 1% 5% 1% 1%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+
+    #CartContent {
+        /* border: 1px solid black; */
+        width: 60%;
+        margin: 1% 1% 1% 5%;
+    }
+
+    #summary {
+        border: 1px solid #DDDDDD;
+        width: 30%;
+        height: max-content;
+        text-align: left;
+        margin: 1% 5% 1% 1%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    #CartContent {
+        /* border: 1px solid black; */
+        width: 60%;
+        margin: 1% 1% 1% 5%;
+    }
+
+    #summary {
+        border: 1px solid #DDDDDD;
+        width: 30%;
+        height: max-content;
+        text-align: left;
+        margin: 1% 5% 1% 1%;
+    }
+}
+
+@media only screen and (max-width: 985px) {
+
+    #CartPage {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    #CartContent {
+        /* border: 1px solid black; */
+        width: 93%;
+        margin: 2% auto 1%;
+    }
+
+    #summary {
+        border: 1px solid #DDDDDD;
+        width: 93%;
+        height: max-content;
+        text-align: left;
+        margin: 2% auto 1%;
+    }
+
+    .CartPriceDiv {
+        /* border: 1px solid black; */
+        width: 370px;
+    }
+
+    #PriceHead {
+        /* border: 1px solid black; */
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    #CartPage {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    #CartContent {
+        /* border: 1px solid black; */
+        width: 95%;
+        margin: 2% auto 1%;
+    }
+
+    #summary {
+        border: 1px solid #DDDDDD;
+        width: 95%;
+        height: max-content;
+        text-align: left;
+        margin: 2% auto 1%;
+    }
+
+    .CartPriceDiv {
+        /* border: 1px solid black; */
+        width: 35%;
+    }
+
+    #PriceHead {
+        /* border: 1px solid black; */
+        width: 32%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    #CartPage {
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .Cart_Item_info {
+        /* border: 1px solid rgb(255, 0, 43); */
+        height: 300px;
+    }
+
+    #CartContent {
+        /* border: 1px solid black; */
+        width: 95%;
+        margin: 2% auto 1%;
+    }
+
+    #summary {
+        border: 1px solid #DDDDDD;
+        width: 95%;
+        height: max-content;
+        text-align: left;
+        margin: 2% auto 1%;
+    }
+
+    #CartBottomDiv {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #CartBottomDiv button {
+        width: 100%;
+        margin: 7px 0px;
+    }
+
+    .image_title {
+        display: flex;
+        /* border: 1px solid black; */
+    }
+
+    .Upper_Content {
+        display: flex;
+        flex-direction: column;
+        /* border: 1px solid black; */
+        height: 230px;
+    }
+
+    #PriceHead {
+        display: none;
+    }
+
+    .CartPriceDiv {
+        /* border: 1px solid black; */
+        width: 80%;
+    }
+
+    .PriceHead {
+        /* border: 1px solid blue; */
+        height: 90px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
