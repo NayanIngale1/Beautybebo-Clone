@@ -1,0 +1,99 @@
+.prod_card {
+  max-width: 300px;
+  max-height: 500px;
+  border: 1px solid rgba(211, 211, 211, 0.608);
+  padding: 10px;
+  background-color: white;
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  border-collapse: 3px;
+  position: relative;
+  transition: all 200ms ease-in-out;
+}
+.prod_card .hoverEye {
+  visibility: hidden;
+  transition: all 167ms ease-in-out;
+}
+
+.prod_card:hover .hoverEye {
+  visibility: visible;
+}
+.imgDiv {
+  object-fit: center;
+}
+.cardimgDiv img {
+  max-height: 250px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: auto;
+  /* object-fit: center; */
+}
+.prod_infoDiv {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.4;
+  padding: 20px;
+  gap: 5px;
+}
+.prod_titleDiv {
+  text-align: center;
+}
+.prod_reviewDiv {
+  text-align: center;
+}
+.prod_cardPriceDiv {
+  display: flex;
+  gap: 10px;
+
+  justify-content: center;
+}
+.prod_cardPriceDiv p {
+  color: green;
+  font-weight: 600;
+}
+.prod_cardButtonDiv {
+  display: flex;
+  gap: 10px;
+}
+
+.card_addCart {
+  padding: 7px 16px;
+  background-color: #dd0285;
+  color: white;
+  font-weight: 700;
+  border-radius: 3px;
+  font-size: 14px;
+  border: none;
+  outline: none;
+}
+.card_addCart:hover {
+  background-color: #f331a5;
+}
+
+.card_wishList_btn {
+  padding: 8px 10px;
+  color: white;
+  background-color: #5b5b5b;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+.card_wishList_btn:hover {
+  background-color: #dd0285;
+}
+.hoverEye {
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: white;
+  background-color: #dd0285;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transition: all 167ms ease-in-out;
+}
