@@ -34,6 +34,7 @@ const Newarrivals = styled.div`
 const Productdiv = styled.div`
      
      border: 1px solid lightgrey;
+     
      &:hover .hoverEye {
   visibility: visible;
 }
@@ -172,13 +173,11 @@ const Productdiv = styled.div`
           items: 2
         }
       };
-      useEffect(()=>{
-        fetch(`http://localhost:8080/products`)
+      useEffect(() => {
+        fetch("https://beautibebo.herokuapp.com/products")
         .then((response) => response.json())
-        .then((actualData) => setdata(actualData));
-      }, []);
-
-      
+        .then((data) => setdata(data.product));
+        }, []);
     
       return( 
       <Newarrivals>
@@ -210,25 +209,24 @@ const Productdiv = styled.div`
 
             {data.map((e)=>{
                 return <Productdiv  primary> 
-            <img src={e.img} alt="" srcset="" />
-                    <p>{e.title}</p>
+            <img src={e.image} alt="" srcset="" />
+                    <p>{e.name}</p>
                     <div className="icondiv">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
-                    ({e.ratings})
+                    ({e.review})
                     </div>
                     <div className="oldnewprice">
-                   <span className="oldprice">₹{e.oldprice}    </span>   
-                    <span className="newprice">  ₹{e.newprice}</span>  
-                    {e.discount === "none" ?  null : <span className="discount">{e.discount}%</span> }
+                   <span className="oldprice">₹{e.strickthrough_price}    </span>   
+                    <span className="newprice">  ₹{e.price}</span>  
+                    {/* {e.discount === "none" ?  null : <span className="discount">{e.discount}%</span> } */}
                     </div>
                     <div className="addtocard">
                         <button className="addbutton">
-                        <i class="fa-solid fa-basket-shopping"></i>     ADD TO CARD
-                        </button>
+                        <i class="fa-solid fa-basket-shopping"></i>ADD TO CARD</button>
                        <div className="heartdiv"><i class="fa-solid fa-heart"></i></div>
                         
                     </div>       
@@ -252,13 +250,22 @@ const Productdiv = styled.div`
       )
 
 };
-// {
-//         "id": 1,
-//         "img": "https://www.beautybebo.com/pub/media/catalog/product/cache/37253e89591b79b38c00254331932999/i/m/image1_600x.jpg",
-//         "title": "Lotus Herbals Whiteglow Vitamin",
-//         "oldprice": "475.00",
-//         "newprice": "428.00",
-//         "ratings": "5",
-//         "category": "skin",
-//         "discount": "10"
-//       }
+
+// Weight: ""
+// about_the_brand: "Body Shop is known for its world famous, and award winning body butters and hand creams, and all-time favorites such as tea tree oil range, born lippy glosses, hemp hand protector, plus new favorites such as Spa fit range, vitamin C, and colour crush range. The brand is totally committed to helping protect the planet, defending human rights, activating self-esteem, supporting community trade and remaining strong on our stance against animal testing."
+// address_of_mfg: "The Body Shop International PLC Littlehampton, West Sussex BN17 6LS,UK"
+// brand: "The Body Shop"
+// category: "makeup"
+// description: "Our new All-In-One BB cream transforms from a white cream to suit your skin tone. Pigment-filled capsules burst when applied to the skin, releasing the colour inside. Just blend for a perfect match and an even, undetectable finish. It's make-up and skincare in one."
+// how_to_use: "Apply on top of or instead of your daily moisturiser using your fingers or our Fresh Nude Foundation Brush. Looking for extra coverage? Use it as a moisturising base under our Fresh Nude Foundation. For a matte finish, you can also mix it with our Instama"
+// image: "https://www.beautybebo.com/pub/media/catalog/product/cache/9afc37bdf46fae888adf23d57cf627ad/t/h/th1.jpg"
+// ingredients: ""
+// name: "The Body Shop All-In-One BB Cream"
+// name_of_mfg: "The Body Shop"
+// origin: "Made In United Kingdom of Great Britain and Northern Ireland (the)"
+// price: 1373
+// review: "5.0"
+// skin_type: "Dry"
+// strickthrough_price: 1445
+// sub_category: "face"
+// _id: "62740e68f0cb91c87bff350b"

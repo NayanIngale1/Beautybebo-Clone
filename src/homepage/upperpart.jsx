@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from "styled-components"
+import { Sidebar } from './sidebar';
 
 import { slider } from './Slideshow';
 export const Upperpart = () => {
     const Upperdiv  =  styled.div`
     background-color: #ffff;
-    width: 100%;
+    /* width: 100%; */
+    /* border:2px solid red; */
     height: 100%;
     display: flex;
     padding: 10px;
@@ -46,11 +48,10 @@ export const Upperpart = () => {
 
         width:30%;
         height: 50px;
-
-       
         padding: 10px;
         padding-left: 0px;
         margin-right: 10px;
+        font-size: 16px;
   }
   @media (max-width: 949px) { 
     display: none;
@@ -59,19 +60,7 @@ export const Upperpart = () => {
     `;
   return ( <Upperdiv>
       <Catgrydiv>
-          <div className='Allcattext' >
-
-    <span>  <i class="fa-solid fa-list-ul fa-sm"></i></span> ALL CATEGORIES
-          </div>
-          <div className='icondiv'>
-            <div className='iconimage'>
-          <img src="https://www.beautybebo.com/pub/media/wysiwyg/menu-icons/makeup-small.png" alt="" srcset="" />
-                          <div>Makeup</div> 
-            </div>
-            <div>
-            <i class="fa-solid fa-angle-right"></i>
-            </div>
-          </div>
+          <Sidebar/>
 
       </Catgrydiv>
       {slider}

@@ -75,20 +75,47 @@ display: flex;
   display: flex;
 }
 
+@media screen and (max-width: 950px) {
+  .fecthdatadiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(1fr , 2);
+  }
+  .btnmapdata{
+    border: 1px solid lightgrey;
+    border-top: 0px;
+    width: 100%;
+   }
+
+}
+@media screen and (min-width: 951px) {
+  /* .fecthdatadiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(1fr , 2);
+  } */
+  
 .btnmapdata{
-     border: 1px solid lightgrey;
-     border-top: 0px;
-     width: 25%;
-    }
+  border: 1px solid lightgrey;
+  border-top: 0px;
+  width: 25%;
+ }
+}
+
+
 
 .btnmapdata:hover .hoverEye {
 visibility: visible;
+
 }
 
 .btnmapdata .hoverEye {
   visibility: hidden;
   transition: all 167ms ease-in-out;
 }
+
 .hoverEye {
   width: fit-content;
   padding: 5px 8px;
@@ -98,8 +125,11 @@ visibility: visible;
   position: absolute;
   top: 30%;
   left: 45%;
+ 
   transition: all 167ms ease-in-out;
 }
+
+
 .btnmapdata > img{
        
         max-width: 250px;
@@ -196,4 +226,5 @@ visibility: visible;
         border-radius: 5px;
     }
 
+    
 

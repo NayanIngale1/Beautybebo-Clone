@@ -33,17 +33,14 @@ export const slider = (
  
       }}
       style={{
-      
-
            width:"100%" ,
-
       }}
      
   >
     
    
-   
-   
+    <img  className='sideshowimg'  src="https://www.beautybebo.com/pub/media/mega-menu/slider-3.jpg" />
+
     <img  className='sideshowimg'  src="https://www.beautybebo.com/pub/media/mega-menu/slider-2.jpg" />
     <img  className='sideshowimg' src = "https://www.beautybebo.com/pub/media/mega-menu/slider-1.jpg" />
     
