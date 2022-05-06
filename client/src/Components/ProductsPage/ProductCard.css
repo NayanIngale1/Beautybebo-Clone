@@ -1,9 +1,11 @@
 .prod_card {
   max-width: 300px;
+  max-height: 500px;
   border: 1px solid rgba(211, 211, 211, 0.608);
   padding: 10px;
   background-color: white;
   color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
   border-collapse: 3px;
   position: relative;
   transition: all 200ms ease-in-out;
@@ -15,6 +17,17 @@
 
 .prod_card:hover .hoverEye {
   visibility: visible;
+}
+.imgDiv {
+  object-fit: center;
+}
+.cardimgDiv img {
+  max-height: 250px;
+  width: 100%;
+  max-width: 250px;
+  padding: 10px;
+  margin: auto;
+  /* object-fit: center; */
 }
 .prod_infoDiv {
   text-align: center;

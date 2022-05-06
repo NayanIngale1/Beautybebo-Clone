@@ -13,6 +13,7 @@
   background-color: #fff;
   height: fit-content;
   max-width: 30%;
+  cursor: pointer;
 }
 
 .prod_accordion {
@@ -20,10 +21,13 @@
   margin: 10px 0;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
-/* .prod_accordion-item {
-  border-bottom: 1px solid rgb(180, 180, 180);
-} */
+.prod_accordion-item .linkTag {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 .prod_accordion-title {
   display: flex;
   border-bottom: 1px solid rgb(180, 180, 180);
@@ -36,9 +40,10 @@
   padding: 10px;
   /* border-top: 1px solid gray; */
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.1;
   max-height: 300px;
   overflow-y: scroll;
+  cursor: pointer;
 }
 
 .prod_accordion-content label {
@@ -46,6 +51,10 @@
   align-items: center;
   gap: 5px;
   padding: 3px 0;
+  cursor: pointer;
+}
+.prod_accordion-content input {
+  cursor: pointer;
 }
 .prod_accordion-content label span {
   font-size: 14px;
