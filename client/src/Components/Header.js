@@ -65,11 +65,18 @@
 //   );
 // };
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { AllCategroies } from './DropDownItems';
+import { HandleLogin } from './HandleLogin';
 
 export const Header = () => {
+  const [iconClick, setIconClick] = useState(false);
+  const handleLogin = () => {
+    useEffect(() => {
+      setIconClick(true);
+    }, []);
+  };
   return (
     <>
       <div className="main-nav">
@@ -88,7 +95,9 @@ export const Header = () => {
                 </select>
                 <span>|</span>
                 <input type="text" placeholder="Enter your search..." />
-                <button>Search</button>
+                <button>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
               </div>
             </div>
           </form>
@@ -98,12 +107,13 @@ export const Header = () => {
             <i class="fa-solid fa-heart"></i>
           </div>
           <div className="user-icon">
-            <div className="user-icon-pic">
+            <div onClick={handleLogin} className="user-icon-pic">
               <i class="fa fa-user" aria-hidden="false"></i>
             </div>
             <span>My Account</span>
           </div>
         </div>
+        {iconClick ? <HandleLogin /> : ''}
       </div>
     </>
   );

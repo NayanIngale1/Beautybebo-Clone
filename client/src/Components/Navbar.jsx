@@ -49,9 +49,9 @@ export const Navbars = () => {
                 <NavDropdown
                   title="MAKEUP"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{
-                    color: 'white',
-                  }}
+                  // style={{
+                  //   color: 'white',
+                  // }}
                 >
                   <div className="containerflex">
                     <div>
@@ -114,7 +114,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="SKIN"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: 'white' }}
+                  style={{ color: 'red' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -150,6 +150,11 @@ export const Navbars = () => {
                         </NavDropdown.Item>
                       ))}
                     </div>
+                    <div>
+                      <NavDropdown.Item href="">
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/SKIN_cATA.jpg"></img>
+                      </NavDropdown.Item>
+                    </div>
                   </div>
                 </NavDropdown>
                 <NavDropdown
@@ -179,6 +184,11 @@ export const Navbars = () => {
                           {e.title}
                         </NavDropdown.Item>
                       ))}
+                    </div>
+                    <div>
+                      <NavDropdown.Item href="">
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/hair_cata.jpg"></img>
+                      </NavDropdown.Item>
                     </div>
                   </div>
                 </NavDropdown>
@@ -221,6 +231,11 @@ export const Navbars = () => {
                         </NavDropdown.Item>
                       ))}
                     </div>
+                    <div>
+                      <NavDropdown.Item href="">
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/personal_cata.jpg"></img>
+                      </NavDropdown.Item>
+                    </div>
                   </div>
                 </NavDropdown>
                 <NavDropdown
@@ -250,6 +265,11 @@ export const Navbars = () => {
                           {e.title}
                         </NavDropdown.Item>
                       ))}
+                    </div>
+                    <div>
+                      <NavDropdown.Item href="">
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/mom_baby_cata.jpg"></img>
+                      </NavDropdown.Item>
                     </div>
                   </div>
                 </NavDropdown>
@@ -299,6 +319,11 @@ export const Navbars = () => {
                           {e.title}
                         </NavDropdown.Item>
                       ))}
+                    </div>
+                    <div>
+                      <NavDropdown.Item href="">
+                        <img src="https://www.beautybebo.com/pub/media/mega-menu/ayurveda_cata.jpg"></img>
+                      </NavDropdown.Item>
                     </div>
                   </div>
                 </NavDropdown>
