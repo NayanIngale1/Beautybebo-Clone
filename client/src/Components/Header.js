@@ -68,14 +68,15 @@
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { AllCategroies } from './DropDownItems';
-// import { HandleLogin } from './HandleLogin';
+import { HandleLogin } from './HandleLogin';
 
 export const Header = () => {
-  // const [iconClick, setIconClick] = useState(false);
+  const [iconClick, setIconClick] = useState(false);
+  // useEffect(() => {
+  //   handleLogin()
+  // }, []);
   // const handleLogin = () => {
-  //   useEffect(() => {
-  //     setIconClick(true);
-  //   }, []);
+  //   setIconClick(true);
   // };
   return (
     <>
@@ -107,13 +108,18 @@ export const Header = () => {
             <i class="fa-solid fa-heart"></i>
           </div>
           <div className="user-icon">
-            <div className="user-icon-pic">
+            <div
+              onClick={() => {
+                setIconClick(!iconClick);
+              }}
+              className="user-icon-pic"
+            >
               <i class="fa fa-user" aria-hidden="false"></i>
+              {iconClick ? <HandleLogin /> : ''}
             </div>
             <span>My Account</span>
           </div>
         </div>
-        {/* {iconClick ? <HandleLogin /> : ''} */}
       </div>
     </>
   );
