@@ -19,6 +19,7 @@ function App() {
         <Header />
       </header>
       <Navbars></Navbars>
+      <div className="onlyrouterspart">
       <Routes>
         <Route path="/" element={<Merge />} />
         <Route path="/Register" element={<Register />} />
@@ -27,6 +28,7 @@ function App() {
         <Route path="/products/:type" element={<ProductsPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
+      </div>
       {/* <Footer /> */}
     </div>
   );

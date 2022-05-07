@@ -94,12 +94,17 @@ export const Bestseller= ()=>{
                 width: 70%;
             }
              .textdivfecth > p{
-              
-                height: 35px;
+                height: 40px;
                 overflow: hidden;
-                font-size: 14px;
+                font-size: 15px;
+                font-weight: 700;
                 font-family: Roboto;
             }
+            .textdivfecth > p:hover{
+               color: #DD0285;
+               cursor: pointer;
+            }
+
             .addtocard{
                 width: fit-content;
 
@@ -113,6 +118,7 @@ export const Bestseller= ()=>{
                     width: fit-content;
                     font-size: 18px;
                     border-bottom: 2px solid #DD0285;
+                    margin-bottom: 0px;
                 }
     `;
 

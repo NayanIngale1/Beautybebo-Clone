@@ -60,7 +60,7 @@
     /* display:flex; */
   }
   
-  img {
+  .name-social>img {
     background-color: rgb(35, 35, 35);
   
     width: 10%;

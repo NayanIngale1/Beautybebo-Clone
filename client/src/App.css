@@ -7,6 +7,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
+  
+}
+.onlyrouterspart{
+
+  padding: 0px 50px;
 }
 
 .App-link {

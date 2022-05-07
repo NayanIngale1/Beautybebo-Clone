@@ -34,7 +34,9 @@ const Newarrivals = styled.div`
 const Productdiv = styled.div`
      
      border: 1px solid lightgrey;
-     
+     justify-content: center;
+     text-align:center;
+     align-items: center;
      &:hover .hoverEye {
   visibility: visible;
 }
@@ -87,10 +89,15 @@ const Productdiv = styled.div`
        overflow: hidden;
         font-size: 14px;
         font-family: inherit;
-        height: 27px;
+        height: 40px;
         padding-bottom: 10px;
         margin-top: 10px;
+        
     }
+    & > p:hover{
+               color: #DD0285;
+               cursor: pointer;
+            }
     .oldnewprice{
         margin-top: 10px;
     }
@@ -140,13 +147,14 @@ const Productdiv = styled.div`
     } 
     .heartdiv  {
         margin-left: 10px;
-        height: 23px;
+      height: 30px;
         font-size: 14px;
         background-color: #666666;
         padding-top: 7px;
         width: 30px;
         color: white;
         text-align: center;
+       
         border-radius: 5px;
     }
 `;
