@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+header > div:nth-child(1) {
+  background-color: rgb(254, 238, 204);
+  background-image: url(https://www.beautybebo.com/pub/media/ads/ad-desktop.jpg);
+  padding: 2rem;
+}
