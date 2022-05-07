@@ -3,7 +3,7 @@
   
     /* border: 2px solid red; */
     display: flex;
-  
+ 
     background-color: rgb(35, 35, 35);
   }
   
@@ -60,7 +60,7 @@
     /* display:flex; */
   }
   
-  img {
+  .name-social>img {
     background-color: rgb(35, 35, 35);
   
     width: 10%;
@@ -79,11 +79,7 @@
     width: 90%;
   }
   
-  .App {
-    /* border:5px solid blue; */
-    background-color: rgb(35, 35, 35);
-  }
-  
+    
   .bottom {
     /* border:3px solid red; */
     display: flex;

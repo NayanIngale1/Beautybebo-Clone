@@ -31,11 +31,22 @@ const Newarrivals = styled.div`
   } */
 `;
 const Productdiv = styled.div`
+<<<<<<< HEAD
   border: 1px solid lightgrey;
 
   &:hover .hoverEye {
     visibility: visible;
   }
+=======
+     
+     border: 1px solid lightgrey;
+     justify-content: center;
+     text-align:center;
+     align-items: center;
+     &:hover .hoverEye {
+  visibility: visible;
+}
+>>>>>>> 8a05965f4309fbbfc995107551d9509b39114d29
 
   & .hoverEye {
     visibility: hidden;
@@ -61,11 +72,90 @@ const Productdiv = styled.div`
       max-width: 100px;
       max-height: 100px;
     }
+<<<<<<< HEAD
   }
   @media (max-width: 750px) {
     & > img {
       max-width: 150px;
       max-height: 150px;
+=======
+    .icondiv {
+       
+        font-size: 12px;
+      
+    }
+    & > p{
+       overflow: hidden;
+        font-size: 14px;
+        font-family: inherit;
+        height: 40px;
+        padding-bottom: 10px;
+        margin-top: 10px;
+        
+    }
+    & > p:hover{
+               color: #DD0285;
+               cursor: pointer;
+            }
+    .oldnewprice{
+        margin-top: 10px;
+    }
+    .oldprice{
+        font-size: 12px;
+        color: grey;
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .newprice{
+        font-size: 17px;
+        font-weight: 900;
+        color: #DD0285;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .discount{
+        font-size: 14px;
+        font-weight: 900;
+        color: green;
+    }
+    .addtocard{
+        margin: 20px 0px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        height: 30px;
+    }
+    .addbutton{
+        font-size: 12px;
+        font-weight: 500;
+        height: 32px;
+        line-height: 30px;
+        color: white;
+       border: none;
+       outline: none;
+        padding: 0px 15px 0px 20px;
+        background-color: #DD0285;
+        font-family: inherit;
+        border-radius: 5px;
+    }
+    .addbutton > i {
+        font-size: 14px;
+    
+
+    } 
+    .heartdiv  {
+        margin-left: 10px;
+      height: 30px;
+        font-size: 14px;
+        background-color: #666666;
+        padding-top: 7px;
+        width: 30px;
+        color: white;
+        text-align: center;
+       
+        border-radius: 5px;
+>>>>>>> 8a05965f4309fbbfc995107551d9509b39114d29
     }
   }
   .icondiv > i {

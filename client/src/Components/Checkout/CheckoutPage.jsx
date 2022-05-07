@@ -146,8 +146,11 @@ export const CheckoutPage = () => {
                 <p>Max 7 Business Days</p>
               </div>
             </div>
+            <div>
 
             <input type="submit" className="checkout_nextBtn" value="Next" />
+            </div>
+
           </form>
         </div>
         <div className="checkout-orderSummary">

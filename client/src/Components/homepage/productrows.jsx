@@ -100,7 +100,66 @@ export const Bestseller = () => {
     }
   `;
 
+<<<<<<< HEAD
   useEffect(() => {
+=======
+                /* padding-top: 40%; */
+                max-width: 200px;
+                height: 150px;
+                justify-content: center;
+                text-align: center;
+            }
+            .fecthdataimg{
+         
+                margin-top: 20px;
+           
+            }
+            .imgdivdata{
+                width:40%;
+                
+             
+            }
+            .fecthdataimg{
+                width: 100px;
+                height: 100px;
+            }
+            .textdivfecth{
+                text-align: left;
+                width: 70%;
+            }
+             .textdivfecth > p{
+                height: 40px;
+                overflow: hidden;
+                font-size: 15px;
+                font-weight: 700;
+                font-family: Roboto;
+            }
+            .textdivfecth > p:hover{
+               color: #DD0285;
+               cursor: pointer;
+            }
+
+            .addtocard{
+                width: fit-content;
+
+                }
+                .onlytextdiv{
+                    border-bottom: 1px solid lightgray;
+                    text-align: left;
+                    padding-bottom: 1px;
+                }
+                .onlytextdiv>p{
+                    width: fit-content;
+                    font-size: 18px;
+                    border-bottom: 2px solid #DD0285;
+                    margin-bottom: 0px;
+                }
+    `;
+
+
+
+    useEffect(()=>{
+>>>>>>> 8a05965f4309fbbfc995107551d9509b39114d29
     fetch(`https://beautibebo.herokuapp.com/products/sub/face?pagesize=3`)
       .then((response) => response.json())
       .then((actualData) => setseller(actualData));
