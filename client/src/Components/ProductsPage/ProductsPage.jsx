@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import { ProductCard } from "./ProductCard";
-import "./ProductsPage.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { ProductCard } from './ProductCard';
+import './ProductsPage.css';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 export const ProductsPage = () => {
   const [opencategory, setOpencategory] = useState(false);
@@ -56,19 +56,19 @@ export const ProductsPage = () => {
   };
 
   const handleSort = (type) => {
-    if (type == "id") {
+    if (type == 'id') {
       getProdData();
-    } else if (type == "name") {
+    } else if (type == 'name') {
       const newData = [...prodData].sort((a, b) => {
         return a.name > b.name ? 1 : a.name < b.name ? -1 : 0;
       });
       setProdData(newData);
-    } else if (type == "price_asc") {
+    } else if (type == 'price_asc') {
       const newData = [...prodData].sort((a, b) => {
         return a.price > b.price ? 1 : a.price < b.price ? -1 : 0;
       });
       setProdData(newData);
-    } else if (type == "price_dec") {
+    } else if (type == 'price_dec') {
       const newData = [...prodData].sort((a, b) => {
         return a.price < b.price ? 1 : a.price > b.price ? -1 : 0;
       });
@@ -88,8 +88,8 @@ export const ProductsPage = () => {
                   onClick={() => setOpencategory(!opencategory)}
                 >
                   <div>CATEGORY</div>
-                  <div style={{ fontWeight: "900" }}>
-                    {opencategory ? "-" : "+"}
+                  <div style={{ fontWeight: '900' }}>
+                    {opencategory ? '-' : '+'}
                   </div>
                 </div>
                 {opencategory && (
@@ -112,7 +112,7 @@ export const ProductsPage = () => {
                         setPageNum(1);
                       }}
                     >
-                      {" "}
+                      {' '}
                       <div className="prod_accordion-content">Skin</div>
                     </Link>
                     <Link
@@ -177,8 +177,8 @@ export const ProductsPage = () => {
           <div className="products_filters">
             <p
               style={{
-                padding: "10px 10px 0 10px",
-                borderBottom: "1px solid gray",
+                padding: '10px 10px 0 10px',
+                borderBottom: '1px solid gray',
               }}
             >
               SHOP BY
@@ -190,8 +190,8 @@ export const ProductsPage = () => {
                   onClick={() => setOpenskintype(!openskintype)}
                 >
                   <div>SKIN TYPE</div>
-                  <div style={{ fontWeight: "900" }}>
-                    {openskintype ? "-" : "+"}
+                  <div style={{ fontWeight: '900' }}>
+                    {openskintype ? '-' : '+'}
                   </div>
                 </div>
                 {openskintype && (
@@ -291,35 +291,35 @@ export const ProductsPage = () => {
                   onClick={() => setOpenprice(!openprice)}
                 >
                   <div>PRICE</div>
-                  <div style={{ fontWeight: "900" }}>
-                    {openprice ? "-" : "+"}
+                  <div style={{ fontWeight: '900' }}>
+                    {openprice ? '-' : '+'}
                   </div>
                 </div>
                 {openprice && (
                   <div className="prod_accordion-content">
                     <label>
                       <input type="checkbox" name="" id="" />
-                      Below {"  "}
-                      <span class="fa-solid fa-indian-rupee-sign"></span>
+                      Below {'  '}
+                      <span className="fa-solid fa-indian-rupee-sign"></span>
                       1,000.00
                     </label>
                     <label>
                       <input type="checkbox" name="" id="" />
-                      <span class="fa-solid fa-indian-rupee-sign"></span>
-                      1,000.00 -{" "}
-                      <span class="fa-solid fa-indian-rupee-sign"></span>
+                      <span className="fa-solid fa-indian-rupee-sign"></span>
+                      1,000.00 -{' '}
+                      <span className="fa-solid fa-indian-rupee-sign"></span>
                       2,000.00
                     </label>
                     <label>
                       <input type="checkbox" name="" id="" />
-                      <span class="fa-solid fa-indian-rupee-sign"></span>
-                      2,000.00 -{" "}
-                      <span class="fa-solid fa-indian-rupee-sign"></span>
+                      <span className="fa-solid fa-indian-rupee-sign"></span>
+                      2,000.00 -{' '}
+                      <span className="fa-solid fa-indian-rupee-sign"></span>
                       3,000.00
                     </label>
                     <label>
                       <input type="checkbox" name="" id="" />
-                      <span class="fa-solid fa-indian-rupee-sign"></span>
+                      <span className="fa-solid fa-indian-rupee-sign"></span>
                       3,000.00 and Above
                     </label>
                   </div>
@@ -333,8 +333,8 @@ export const ProductsPage = () => {
                   onClick={() => setOpenbrand(!openbrand)}
                 >
                   <div>BRAND</div>
-                  <div style={{ fontWeight: "900" }}>
-                    {openbrand ? "-" : "+"}
+                  <div style={{ fontWeight: '900' }}>
+                    {openbrand ? '-' : '+'}
                   </div>
                 </div>
                 {openbrand && (
@@ -524,7 +524,7 @@ export const ProductsPage = () => {
             <p>CATEGORY</p>
             <div className="sort_and_pagination">
               <div className="sort_div">
-                Sort:{" "}
+                Sort:{' '}
                 <select
                   name="sort"
                   id=""
@@ -538,7 +538,7 @@ export const ProductsPage = () => {
               </div>
               <div className="pagination_div">
                 <button
-                  className={pageNum === 1 ? "active" : null}
+                  className={pageNum === 1 ? 'active' : null}
                   onClick={() => {
                     setPageNum(1);
                     setProdloading(true);
@@ -547,7 +547,7 @@ export const ProductsPage = () => {
                   1
                 </button>
                 <button
-                  className={pageNum === 2 ? "active" : null}
+                  className={pageNum === 2 ? 'active' : null}
                   onClick={() => {
                     setPageNum(2);
                     setProdloading(true);
@@ -556,7 +556,7 @@ export const ProductsPage = () => {
                   2
                 </button>
                 <button
-                  className={pageNum === 3 ? "active" : null}
+                  className={pageNum === 3 ? 'active' : null}
                   onClick={() => {
                     setPageNum(3);
                     setProdloading(true);
@@ -565,7 +565,7 @@ export const ProductsPage = () => {
                   3
                 </button>
                 <button
-                  className={pageNum === 4 ? "active" : null}
+                  className={pageNum === 4 ? 'active' : null}
                   onClick={() => {
                     setPageNum(4);
                     setProdloading(true);
@@ -574,7 +574,7 @@ export const ProductsPage = () => {
                   4
                 </button>
                 <button
-                  className={pageNum === 5 ? "active" : null}
+                  className={pageNum === 5 ? 'active' : null}
                   onClick={() => {
                     setPageNum(5);
                     setProdloading(true);
@@ -588,7 +588,7 @@ export const ProductsPage = () => {
                     setProdloading(true);
                   }}
                 >
-                  <span class="fa-solid fa-angle-right"></span>
+                  <span className="fa-solid fa-angle-right"></span>
                 </button>
               </div>
             </div>
@@ -596,13 +596,13 @@ export const ProductsPage = () => {
           {prodloading ? (
             <div
               style={{
-                fontWeight: "900",
-                fontSize: "30px",
-                height: "500px",
-                width: "100 %",
-                textAlign: "center",
-                margin: "20px auto",
-                color: "#dd0285",
+                fontWeight: '900',
+                fontSize: '30px',
+                height: '500px',
+                width: '100 %',
+                textAlign: 'center',
+                margin: '20px auto',
+                color: '#dd0285',
               }}
             >
               Loading....
@@ -618,13 +618,13 @@ export const ProductsPage = () => {
           ) : (
             <div
               style={{
-                fontWeight: "900",
-                fontSize: "30px",
-                height: "500px",
-                width: "100 %",
-                textAlign: "center",
-                margin: "20px auto",
-                color: "#dd0285",
+                fontWeight: '900',
+                fontSize: '30px',
+                height: '500px',
+                width: '100 %',
+                textAlign: 'center',
+                margin: '20px auto',
+                color: '#dd0285',
               }}
             >
               No More Products
@@ -632,7 +632,7 @@ export const ProductsPage = () => {
           )}
           <div className="sort_and_pagination">
             <div className="sort_div">
-              Sort:{" "}
+              Sort:{' '}
               <select
                 name="sort"
                 id=""
@@ -646,7 +646,7 @@ export const ProductsPage = () => {
             </div>
             <div className="pagination_div">
               <button
-                className={pageNum === 1 ? "active" : null}
+                className={pageNum === 1 ? 'active' : null}
                 onClick={() => {
                   setPageNum(1);
                   setProdloading(true);
@@ -655,7 +655,7 @@ export const ProductsPage = () => {
                 1
               </button>
               <button
-                className={pageNum === 2 ? "active" : null}
+                className={pageNum === 2 ? 'active' : null}
                 onClick={() => {
                   setPageNum(2);
                   setProdloading(true);
@@ -664,7 +664,7 @@ export const ProductsPage = () => {
                 2
               </button>
               <button
-                className={pageNum === 3 ? "active" : null}
+                className={pageNum === 3 ? 'active' : null}
                 onClick={() => {
                   setPageNum(3);
                   setProdloading(true);
@@ -673,7 +673,7 @@ export const ProductsPage = () => {
                 3
               </button>
               <button
-                className={pageNum === 4 ? "active" : null}
+                className={pageNum === 4 ? 'active' : null}
                 onClick={() => {
                   setPageNum(4);
                   setProdloading(true);
@@ -682,7 +682,7 @@ export const ProductsPage = () => {
                 4
               </button>
               <button
-                className={pageNum === 5 ? "active" : null}
+                className={pageNum === 5 ? 'active' : null}
                 onClick={() => {
                   setPageNum(5);
                   setProdloading(true);
@@ -696,7 +696,7 @@ export const ProductsPage = () => {
                   setProdloading(true);
                 }}
               >
-                <span class="fa-solid fa-angle-right"></span>
+                <span className="fa-solid fa-angle-right"></span>
               </button>
             </div>
           </div>

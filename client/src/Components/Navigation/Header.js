@@ -65,10 +65,10 @@
 //   );
 // };
 
-import React, { useEffect, useState } from "react";
-import "./Header.css";
-import { AllCategroies } from "./DropDownItems";
-import { HandleLogin } from "./HandleLogin";
+import React, { useEffect, useState } from 'react';
+import './Header.css';
+import { AllCategroies } from './DropDownItems';
+import { HandleLogin } from './HandleLogin';
 
 export const Header = () => {
   const [iconClick, setIconClick] = useState(false);
@@ -105,7 +105,7 @@ export const Header = () => {
         </div>
         <div className="main-nav-profile">
           <div className="like-icon">
-            <i class="fa-solid fa-heart"></i>
+            <i className="fa-solid fa-heart"></i>
           </div>
           <div className="user-icon">
             <div
@@ -114,8 +114,8 @@ export const Header = () => {
               }}
               className="user-icon-pic"
             >
-              <i class="fa fa-user" aria-hidden="false"></i>
-              {iconClick ? <HandleLogin /> : ""}
+              <i className="fa fa-user" aria-hidden="false"></i>
+              {iconClick ? <HandleLogin /> : ''}
             </div>
             <span>My Account</span>
           </div>

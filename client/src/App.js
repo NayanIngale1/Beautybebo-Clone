@@ -22,8 +22,8 @@ function App() {
       <div className="onlyrouterspart">
       <Routes>
         <Route path="/" element={<Merge />} />
-        <Route path="/Register" element={<Register />} />
-        <Route path="/Login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/details/:id" element={<ProductDeails />} />
         <Route path="/products/:type" element={<ProductsPage />} />
         <Route path="/checkout" element={<CheckoutPage />} />
