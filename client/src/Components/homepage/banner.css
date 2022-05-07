@@ -1,0 +1,63 @@
+.banner2maindiv{
+    display: flex;
+justify-content: space-between;
+margin: 20px 0px;
+width: 100%;
+}
+.banner2maindiv >  div{
+    width: 50%;
+}
+.banner2maindiv >  div >img{
+    width: 100%;
+}
+.banner3{
+    width: 100%;
+    margin: 20px 0px;
+}
+.banner3 > img{
+    width: 100%;
+ 
+}
+
+.banner1{
+     width: 100%;
+}
+.banner1 > img{
+    width: 100%;
+
+}
+
+.title-about-us{
+   
+    margin-bottom: 17px;
+   text-align: left;
+}
+.title-about-us>h1{
+    font-family: Roboto;    
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about_us_content {
+text-align: left;
+margin-bottom: 0;
+font-size: 14px;
+color: #666666
+}
+.readmore{
+    color: #E742A8;
+  
+}
+@media screen and (max-width: 750px) {
+    .banner2maindiv {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .banner2maindiv >  div{
+        width: 100%;
+    }
+    .banner2maindiv >  div > img{
+        width: 100%;
+    }
+  }
