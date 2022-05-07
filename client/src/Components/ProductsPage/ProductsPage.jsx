@@ -30,11 +30,7 @@ export const ProductsPage = () => {
         setProdData(res.product);
         // console.log("res:", res);
       })
-      .then((res) =>
-       
-          setProdloading(false))
-        
-   
+      .then((res) => setProdloading(false));
   };
   // console.log("prodData:", prodData);
 
