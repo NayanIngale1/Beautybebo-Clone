@@ -13,6 +13,8 @@
 }
 .checkoutFormDiv {
   width: 100%;
+ 
+
 }
 .allPage {
   background-color: white;
@@ -26,7 +28,10 @@
 }
 .checkout_form {
   padding: 20px 0;
+  width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .checkout_formLabel {
   padding: 10px 0;
@@ -41,9 +46,11 @@
   padding: 5px 8px;
   font-size: 16px;
   line-height: 1.4;
+
   width: 98%;
   border: 1px solid lightgray;
   outline: none;
+  /* border: 2px solid red; */
 }
 .checkout_delivey {
   margin-top: 20px;

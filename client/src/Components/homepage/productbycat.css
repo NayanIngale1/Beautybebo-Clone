@@ -1,0 +1,243 @@
+.react-tabs{
+
+}
+.tablistdiv{
+  width: 100%;
+
+}
+.tablistdiv{
+width: 100%;
+display: flex;
+}
+.tabs{
+  list-style-type: none;
+  height: 82px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  outline: none;
+  padding: 10px 0px;
+  border: 1px solid lightgrey;
+  width: 200px;
+
+}
+.react-tabs__tab--selected{
+  background-color: #DD0285;
+  width: 200px;
+  height: 82px;
+  padding: 10px 0px;
+  bottom: 0px;
+  /* border: 1px solid lightgrey; */
+  /* width: 170px; */
+}
+.react-tabs__tab--selected >  img{
+  /* background-color: white; */
+  filter: brightness(0) invert(1);
+    max-height: 40px;
+    max-width: 40px;
+}
+.react-tabs__tab--selected >  p{
+  color: white;
+}
+
+.react-tabs__tab-panel--selected{
+
+}
+
+
+.react-tabs__tab-panel{
+
+}
+
+
+@media screen and (max-width: 750px) {
+  .tablistdiv{
+    display: block;
+    display: flex;
+    overflow: auto;
+    }
+}
+
+/* .imagediv{
+   height: 82px;
+  padding: 10px 0px;
+  border: 1px solid lightgrey;
+  width: 178px;
+} */
+
+
+ .tabsimg{
+  max-height: 40px;
+  max-width: 40px;
+}
+
+
+/* FECTCH DATA DIV CSS */
+
+.fecthdatadiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+}
+
+@media screen and (max-width: 950px) {
+  .fecthdatadiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(1fr , 2);
+  }
+  .btnmapdata{
+    border: 1px solid lightgrey;
+    border-top: 0px;
+    width: 100%;
+   }
+
+}
+@media screen and (min-width: 951px) {
+  /* .fecthdatadiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(1fr , 2);
+  } */
+  
+.btnmapdata{
+  border: 1px solid lightgrey;
+  border-top: 0px;
+  width: 25%;
+ }
+}
+
+
+
+.btnmapdata:hover .hoverEye {
+visibility: visible;
+
+}
+
+.btnmapdata .hoverEye {
+  visibility: hidden;
+  transition: all 167ms ease-in-out;
+}
+
+.hoverEye {
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 3px;
+  color: white;
+  background-color: #dd0285;
+  position: absolute;
+  top: 30%;
+  left: 45%;
+ 
+  transition: all 167ms ease-in-out;
+}
+
+
+.btnmapdata > img{
+       
+        max-width: 250px;
+       max-height: 220px;
+      
+    }
+    @media (max-width: 450px) { 
+        .btnmapdata > img{
+            max-width: 100px;
+       max-height: 100px;  
+   }
+        
+  }
+  @media (max-width: 750px) { 
+    .btnmapdata > img{
+            max-width: 150px;
+       max-height: 150px;  
+   }
+  }
+    .icondiv > i {
+        font-size: 12px;
+        color: #ECA330;
+        
+    }
+    .icondiv {
+       
+        font-size: 12px;
+      
+    }
+    .btnmapdata > p{
+       overflow: hidden;
+        font-size: 14px;
+        font-family: inherit;
+        height: 40px;
+        font-weight: 700;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .btnmapdata > p:hover{
+      color: #DD0285;
+      cursor: pointer;
+   }
+    .oldnewprice{
+        margin-top: 10px;
+    }
+    .oldprice{
+        font-size: 12px;
+        color: grey;
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .newprice{
+        font-size: 17px;
+        font-weight: 900;
+        color: #DD0285;
+        display: inline-block;
+        margin-right: 8px;
+    }
+    .discount{
+        font-size: 14px;
+        font-weight: 900;
+        color: green;
+    }
+    .addtocard{
+        margin: 20px 0px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        height: 30px;
+    }
+    .addbutton{
+        font-size: 12px;
+        font-weight: 500;
+        height: 32px;
+        line-height: 30px;
+        color: white;
+       border: none;
+       outline: none;
+        padding: 0px 15px 0px 20px;
+        background-color: #DD0285;
+        font-family: inherit;
+        border-radius: 5px;
+    }
+    .addbutton > i {
+        font-size: 14px;
+    
+
+    } 
+    .heartdiv  {
+        margin-left: 10px;
+        height: 30px;
+        font-size: 14px;
+        background-color: #666666;
+        padding-top: 7px;
+        width: 30px;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+    }
+
+    
+
