@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../context/productContext';
 import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
 
 export const ProductDeails = (props) => {
+  const { handleCart } = useContext(ProductContext);
+  const { handleCartValue } = useContext(ProductContext);
   const { id } = useParams();
   // console.log("id:", id);
 
@@ -87,7 +91,12 @@ export const ProductDeails = (props) => {
             <div className="brand">Brand : {product.brand}</div>
             <div className="addQty">
               Qty <input type="number" defaultValue="1" min="1" max="5" />{' '}
-              <button className="addCart">
+              <button
+                className="addCart"
+                onClick={() => {
+                  handleCart(product);
+                }}
+              >
                 <span className="fa-solid fa-basket-shopping"></span> Add to
                 cart
               </button>

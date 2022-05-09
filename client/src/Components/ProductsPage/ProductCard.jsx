@@ -1,8 +1,12 @@
 import React from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../context/productContext';
 import { useNavigate } from 'react-router-dom';
 import './ProductCard.css';
 
 export const ProductCard = (props) => {
+  const { handleCart } = useContext(ProductContext);
+  const { handleCartValue } = useContext(ProductContext);
   const { prod } = props;
   // console.log("prod:", prod);
   const navigate = useNavigate();
@@ -43,7 +47,12 @@ export const ProductCard = (props) => {
             {prod.offer ? <p>{prod.offer} off</p> : null}
           </div>
           <div className="prod_cardButtonDiv">
-            <button className="card_addCart">
+            <button
+              className="card_addCart"
+              onClick={() => {
+                handleCart(prod);
+              }}
+            >
               <span className="fa-solid fa-basket-shopping"></span> Add to cart
             </button>
             <button className="card_wishList_btn">

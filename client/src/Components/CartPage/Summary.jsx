@@ -1,23 +1,41 @@
 import './CartPage.css';
-import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
-import { useState } from 'react';
+// import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io';
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../context/productContext';
 
 export const Summary = () => {
   const [estimate, setEstimate] = useState(false);
   const [coupon, setCoupon] = useState(false);
+  const [cartArr,setCartArr]=useState();
+  const {handleCartValue}=useContext(ProductContext)
+  const {cart} =useContext(ProductContext);
+  const {cartValue}=useContext(ProductContext)
+  const {totalCart}=useContext(ProductContext)
+  var sum=0;
+  useEffect(()=>{
+    if(cartValue==false){
+      setCartArr(totalCart)
+      handleCartValue(true)
+    }
+  })
   const handleEstimate = () => {
     setEstimate(!estimate);
   };
   const handleCoupon = () => {
     setCoupon(!coupon);
   };
+  
+  console.log(totalCart)
+  for(var i=0;i<totalCart.length;i++){
+    sum+=totalCart[i].price
+  }
   return (
     <div id="summary">
       <div id="top">
         <p id="summary_heading">SUMMARY</p>
         <div id="ESTIMATE_SHIPPING" onClick={handleEstimate}>
           ESTIMATE SHIPPING AND TAX{' '}
-          {estimate ? <IoIosArrowUp /> : <IoIosArrowDown />}
+          {/* {estimate ? <IoIosArrowUp /> : <IoIosArrowDown />} */}
         </div>
         {estimate ? (
           <>
@@ -81,8 +99,13 @@ export const Summary = () => {
         ) : null}
         <div>
           <div id="subtotal_div">
-            <div id="subtotal">Subtotal</div>
-            <div id="subtotal_price">₹1,438.00</div>
+            {totalCart.map((el)=>(
+              <div>
+                <div id="subtotal">Subtotal</div>
+                <div id="subtotal_price">₹{sum}</div>
+              </div>
+            ))}
+
           </div>
           <div id="shipping_div">
             <div id="shipping">
@@ -93,10 +116,10 @@ export const Summary = () => {
           </div>
           <div id="total_div">
             <div id="total">Order Total Incl. GST</div>
-            <div id="total_price">₹1,438.00</div>
+            <div id="total_price">₹{sum}</div>
           </div>
           <div id="apply_discount" onClick={handleCoupon}>
-            APPLY DISCOUNT CODE {coupon ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            {/* APPLY DISCOUNT CODE {coupon ? <IoIosArrowUp /> : <IoIosArrowDown />} */}
           </div>
           {coupon ? (
             <>

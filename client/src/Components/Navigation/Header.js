@@ -64,14 +64,18 @@
 //     </div>
 //   );
 // };
-
+import { MdFavorite } from 'react-icons/md';
+import { FaUser } from 'react-icons/fa';
 import React, { useEffect, useState } from 'react';
 import './Header.css';
 import { AllCategroies } from './DropDownItems';
 import { HandleLogin } from './HandleLogin';
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   const [iconClick, setIconClick] = useState(false);
+  const [loginDropDown, seloginDropDown] = useState(false);
+
   // useEffect(() => {
   //   handleLogin()
   // }, []);
@@ -81,9 +85,9 @@ export const Header = () => {
   return (
     <>
       <div className="main-nav">
-        <div className="main-nav-logo">
+        <Link to="/" className="main-nav-logo">
           <img src="https://www.beautybebo.com/pub/media/logo/default/beautybebo_1.png" />
-        </div>
+        </Link>
 
         <div className="main-nav-middle">
           <form>
@@ -103,7 +107,7 @@ export const Header = () => {
             </div>
           </form>
         </div>
-        <div className="main-nav-profile">
+        {/* <div className="main-nav-profile">
           <div className="like-icon">
             <i className="fa-solid fa-heart"></i>
           </div>
@@ -118,6 +122,49 @@ export const Header = () => {
               {iconClick ? <HandleLogin /> : ''}
             </div>
             <span>My Account</span>
+          </div>
+        </div> */}
+        <div id="profile_div">
+          <div id="fav_div">
+            <MdFavorite />
+          </div>
+          <div
+            id="account_div"
+            onClick={() => {
+              seloginDropDown(!loginDropDown);
+            }}
+          >
+            <div id="avatar">
+              <FaUser />
+            </div>
+            <div
+              id="content"
+              onClick={() => {
+                seloginDropDown(!loginDropDown);
+              }}
+            >
+              My Account
+            </div>
+            {loginDropDown ? (
+              <>
+                <div id="content_dropdown">
+                  <Link
+                    style={{ textDecoration: 'none', color: '#666666' }}
+                    to="/login"
+                    id="login_dropdown"
+                  >
+                    Login
+                  </Link>
+                  <Link
+                    style={{ textDecoration: 'none', color: '#666666' }}
+                    to="/register"
+                    id="register_dropdown"
+                  >
+                    Register
+                  </Link>
+                </div>
+              </>
+            ) : null}
           </div>
         </div>
       </div>

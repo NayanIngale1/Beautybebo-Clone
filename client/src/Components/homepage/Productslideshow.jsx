@@ -1,4 +1,7 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
+
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../context/productContext';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import styled from 'styled-components';
@@ -31,22 +34,13 @@ const Newarrivals = styled.div`
   } */
 `;
 const Productdiv = styled.div`
-<<<<<<< HEAD
   border: 1px solid lightgrey;
-
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   &:hover .hoverEye {
     visibility: visible;
   }
-=======
-     
-     border: 1px solid lightgrey;
-     justify-content: center;
-     text-align:center;
-     align-items: center;
-     &:hover .hoverEye {
-  visibility: visible;
-}
->>>>>>> 8a05965f4309fbbfc995107551d9509b39114d29
 
   & .hoverEye {
     visibility: hidden;
@@ -72,90 +66,77 @@ const Productdiv = styled.div`
       max-width: 100px;
       max-height: 100px;
     }
-<<<<<<< HEAD
-  }
-  @media (max-width: 750px) {
-    & > img {
-      max-width: 150px;
-      max-height: 150px;
-=======
     .icondiv {
-       
-        font-size: 12px;
-      
+      font-size: 12px;
     }
-    & > p{
-       overflow: hidden;
-        font-size: 14px;
-        font-family: inherit;
-        height: 40px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        
+    & > p {
+      overflow: hidden;
+      font-size: 14px;
+      font-family: inherit;
+      height: 40px;
+      padding-bottom: 10px;
+      margin-top: 10px;
     }
-    & > p:hover{
-               color: #DD0285;
-               cursor: pointer;
-            }
-    .oldnewprice{
-        margin-top: 10px;
+    & > p:hover {
+      color: #dd0285;
+      cursor: pointer;
     }
-    .oldprice{
-        font-size: 12px;
-        color: grey;
-        text-decoration: line-through;
-        display: inline-block;
-        margin-right: 8px;
+    .oldnewprice {
+      margin-top: 10px;
     }
-    .newprice{
-        font-size: 17px;
-        font-weight: 900;
-        color: #DD0285;
-        display: inline-block;
-        margin-right: 8px;
+    .oldprice {
+      font-size: 12px;
+      color: grey;
+      text-decoration: line-through;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .discount{
-        font-size: 14px;
-        font-weight: 900;
-        color: green;
+    .newprice {
+      font-size: 17px;
+      font-weight: 900;
+      color: #dd0285;
+      display: inline-block;
+      margin-right: 8px;
     }
-    .addtocard{
-        margin: 20px 0px;
-        display: flex;
-        text-align: center;
-        justify-content: center;
-        height: 30px;
+    .discount {
+      font-size: 14px;
+      font-weight: 900;
+      color: green;
     }
-    .addbutton{
-        font-size: 12px;
-        font-weight: 500;
-        height: 32px;
-        line-height: 30px;
-        color: white;
-       border: none;
-       outline: none;
-        padding: 0px 15px 0px 20px;
-        background-color: #DD0285;
-        font-family: inherit;
-        border-radius: 5px;
+    .addtocard {
+      margin: 20px 0px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      height: 30px;
+    }
+    .addbutton {
+      font-size: 12px;
+      font-weight: 500;
+      height: 32px;
+      line-height: 30px;
+      color: white;
+      border: none;
+      outline: none;
+      padding: 0px 15px 0px 20px;
+      background-color: #dd0285;
+      font-family: inherit;
+      border-radius: 5px;
     }
     .addbutton > i {
-        font-size: 14px;
-    
-
-    } 
-    .heartdiv  {
-        margin-left: 10px;
+      font-size: 14px;
+    }
+    .heartdiv {
+      margin-left: 10px;
       height: 30px;
-        font-size: 14px;
-        background-color: #666666;
-        padding-top: 7px;
-        width: 30px;
-        color: white;
-        text-align: center;
-       
-        border-radius: 5px;
->>>>>>> 8a05965f4309fbbfc995107551d9509b39114d29
+      font-size: 14px;
+      background-color: #666666;
+      padding-top: 7px;
+      width: 30px;
+      color: white;
+      text-align: center;
+
+      border-radius: 5px;
     }
   }
   .icondiv > i {
@@ -232,6 +213,9 @@ const Productdiv = styled.div`
 `;
 export const Productslider = () => {
   const [data, setdata] = useState([]);
+  const { handleCart } = useContext(ProductContext);
+  const { handleCartValue } = useContext(ProductContext);
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -298,8 +282,13 @@ export const Productslider = () => {
                 {/* {e.discount === "none" ?  null : <span className="discount">{e.discount}%</span> } */}
               </div>
               <div className="addtocard">
-                <button className="addbutton">
-                  <i className="fa-solid fa-basket-shopping"></i>ADD TO CARD
+                <button
+                  className="addbutton"
+                  onClick={() => {
+                    handleCart(e);
+                  }}
+                >
+                  <i className="fa-solid fa-basket-shopping"></i>ADD TO CART
                 </button>
                 <div className="heartdiv">
                   <i className="fa-solid fa-heart"></i>

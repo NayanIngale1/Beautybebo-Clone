@@ -75,13 +75,25 @@ input {
 }
 .like-icon {
   width: 2.4rem;
-  border: 1px solid pink;
+  border: 1px solid #666666;
   margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like-icon :hover {
+  border: 1px solid transparent;
+  color: white;
+  background-color: rgb(221, 2, 133);
 }
 .user-icon-pic {
   width: 2.4rem;
-  border: 1px solid pink;
+  border: 1px solid #666666;
+
   margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .user-icon :hover {
   background-color: rgb(221, 2, 133);
@@ -114,4 +126,86 @@ input {
     display: flex;
     flex-wrap: wrap;
   }
+}
+/* ---------------- */
+#profile_div {
+  /* border: 1px solid black; */
+  height: 64px;
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 95%;
+}
+#fav_div {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#fav_div:hover {
+  border: 1px solid #dd0285;
+  background-color: #dd0285;
+  color: white;
+}
+#account_div {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 30px;
+  width: 150px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+#avatar {
+  border: 1px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin: 0px 5px;
+}
+#avatar:hover {
+  border: 1px solid #dd0285;
+  background-color: #dd0285;
+  color: white;
+}
+#content {
+  font-size: 85%;
+  color: #232323;
+  cursor: pointer;
+}
+#content_dropdown {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 150px;
+  width: 150px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  background-color: white;
+  color: #232323;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+#login_dropdown {
+  border-bottom: 1px solid #f5f5f5;
+  flex: 1;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+#register_dropdown {
+  /* border: 1px solid black; */
+  flex: 1;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
 }

@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom";
-import { Nav } from "react-bootstrap";
-import { NavDropdown } from "react-bootstrap";
-import { Navbar } from "react-bootstrap";
-import { Container } from "react-bootstrap";
-import { Offcanvas } from "react-bootstrap";
+import { Link } from 'react-router-dom';
+import { GiShoppingBag } from 'react-icons/gi';
+import { Nav } from 'react-bootstrap';
+import { NavDropdown } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import { Offcanvas } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 import {
   Face,
   eye,
@@ -23,15 +25,27 @@ import {
   EyeCare,
   Lips,
   NaturalSkinCare,
-} from "./DropDownItems";
+} from './DropDownItems';
 
-import "./Navbar.css";
+import './Navbar.css';
+import { useContext } from 'react';
+import { ProductContext } from '../../context/productContext';
 
 export const Navbars = () => {
+  const [cartValues, setCartValues] = useState(0);
+  const { cart } = useContext(ProductContext);
+  const { cartValue } = useContext(ProductContext);
+  const { handleCartValue } = useContext(ProductContext);
+  useEffect(() => {
+    if (cartValue == false) {
+      setCartValues((p) => p + cart.price);
+      handleCartValue(true);
+    }
+  });
   return (
     <div>
-      <Link to="/Register">Register</Link>
-      <Link to="/Login">Login</Link>
+      {/* <Link to="/Register">Register</Link>
+      <Link to="/Login">Login</Link> */}
       <Navbar expand="md" className="mb-3 bgcolor" variant="dark">
         <Container>
           <Navbar.Offcanvas
@@ -60,7 +74,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {Face.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -71,7 +85,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {eye.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={e.id}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -82,7 +96,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {Lips.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -93,7 +107,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {Nails.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -104,7 +118,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {ToolsBrushes.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -114,7 +128,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="SKIN"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: "red" }}
+                  style={{ color: 'red' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -123,7 +137,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {EyeCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -134,7 +148,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {FaceCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -145,7 +159,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {BodyCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -160,7 +174,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="HAIR"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -169,7 +183,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {HairCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -180,7 +194,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {HairLoss.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -195,7 +209,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="PERSONAL CARE"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -204,7 +218,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {BathBody.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -215,7 +229,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {BathingAccessories.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -226,7 +240,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {BathShower.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -241,7 +255,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="MOM & BABY CARE"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -250,7 +264,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {BabyCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -261,7 +275,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {MomCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -276,7 +290,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="FRAGRANCE"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -285,7 +299,7 @@ export const Navbars = () => {
                       </NavDropdown.Item> */}
 
                       {Fragrance.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -295,7 +309,7 @@ export const Navbars = () => {
                 <NavDropdown
                   title="AYURVEDA"
                   id={`offcanvasNavbarDropdown-expand-sm`}
-                  style={{ color: "white" }}
+                  style={{ color: 'white' }}
                 >
                   <div className="containerflex">
                     <div>
@@ -304,7 +318,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {NaturalSkinCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={`products${e.id}`}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -315,7 +329,7 @@ export const Navbars = () => {
                       </NavDropdown.Item>
 
                       {NaturalHairCare.map((e) => (
-                        <NavDropdown.Item href={e.path}>
+                        <NavDropdown.Item href={e.id}>
                           {e.title}
                         </NavDropdown.Item>
                       ))}
@@ -342,7 +356,18 @@ export const Navbars = () => {
               </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-          <Navbar.Brand href="#">MY CART</Navbar.Brand>
+          <Link to="/cart" style={{ textDecoration: 'none', fontSize: '50%' }}>
+            <Navbar.Brand
+              href="#"
+              style={{ textDecoration: 'none', fontSize: '1rem' }}
+            >
+              {/* MY CART:₹{cartValues} */}
+              <div>
+                <GiShoppingBag></GiShoppingBag> MY CART
+                <span>-₹{cartValues}</span>{' '}
+              </div>
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-sm`} />
         </Container>
       </Navbar>

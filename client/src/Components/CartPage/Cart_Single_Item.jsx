@@ -1,31 +1,58 @@
-import "./CartPage.css"
+import './CartPage.css';
+import { useContext, useEffect, useState } from 'react';
+import { CartBottomDiv } from './Cart_Item_div';
+import { ProductContext } from '../../context/productContext';
+import { Button } from 'react-bootstrap';
 export const CartSingleItem = () => {
-    return (
-        <div className="Cart_Item_info">
-            <div className="Upper_Content">
-                <div className="image_title">
-                    <div className="Cart_Img_Div">
-                        <img src="https://www.beautybebo.com/pub/media/catalog/product/cache/c9615af5e5a6f27d0b9239c1928d8610/5/4/54_2.jpg" alt="" />
-                    </div>
-                    <div className="Cart_Title_Div">FACES CANADA PEACHES N CREAM TINTED MOISTURIZER - LIGHT 01</div>
-                </div>
-                <div className="PriceHead">
-                    <div id="price_head">PRICE</div>
-                    <div id="qty_head">QTY</div>
-                    <div id="subtotal_head">SUBTOTAL</div>
-                </div>
-                <div className="CartPriceDiv">
-                    <div className="Cart_Price_Div">₹539.00</div>
-                    <div className="Cart_Qty_Div">
-                        <input type="text" defaultValue={1}/>
-                    </div>
-                    <div className="Cart_Subtotal_Div">₹539.00</div>
-                </div>
+  const [itemNo, setItemNo] = useState(1);
+  const [cartArr, setCartArr] = useState();
+  const { handleCartValue } = useContext(ProductContext);
+  const { cart } = useContext(ProductContext);
+  const { cartValue } = useContext(ProductContext);
+  const { totalCart } = useContext(ProductContext);
+  var sum = 0;
+  useEffect(() => {
+    if (cartValue == false) {
+      setCartArr(totalCart);
+      handleCartValue(true);
+    }
+  });
+  console.log(totalCart);
+  return (
+    <div className="Cart_Item_info">
+      {totalCart.map((el) => (
+        <div className="Upper_Content">
+          <div className="image_title">
+            <div className="Cart_Img_Div">
+              <img src={el.image} alt="" />
             </div>
-            <div className="Lower_Content">
-                <button className="Cart_Edit_Button">EDIT</button>
-                <button className="Cart_Remove_Item_Button">REMOVE ITEM</button>
+            <div className="Cart_Title_Div">{el.name}</div>
+          </div>
+          <div className="PriceHead">
+            <div id="price_head">PRICE</div>
+            <div id="qty_head">QTY</div>
+            <div id="subtotal_head">SUBTOTAL</div>
+          </div>
+          <div className="CartPriceDiv">
+            <div className="Cart_Price_Div">₹{el.price}</div>
+            <div className="Cart_Qty_Div">
+              <input
+                onChange={(e) => setItemNo(e.target.value)}
+                type="text"
+                defaultValue={1}
+              />
             </div>
+            <div className="Cart_Subtotal_Div">₹{el.price * itemNo}</div>
+          </div>
         </div>
-    )
-}
+      ))}
+
+      <div className="Lower_Content">
+        <button className="Cart_Edit_Button">EDIT</button>
+        <button className="Cart_Remove_Item_Button">REMOVE ITEM</button>
+      </div>
+      <hr></hr>
+      <CartBottomDiv></CartBottomDiv>
+    </div>
+  );
+};

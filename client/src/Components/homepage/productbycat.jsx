@@ -1,10 +1,16 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
+
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../context/productContext';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import './productbycat.css';
 
 export const Tabsfunction = () => {
   const [Data, setData] = useState([]);
+
+  const { handleCart } = useContext(ProductContext);
+  const { handleCartValue } = useContext(ProductContext);
 
   useEffect(() => {
     fetch(`https://beautibebo.herokuapp.com/products/sub/face?pagesize=4`)
@@ -40,8 +46,13 @@ export const Tabsfunction = () => {
                 <span className="newprice"> ₹{e.price}</span>
               </div>
               <div className="addtocard">
-                <button className="addbutton">
-                  <i className="fa-solid fa-basket-shopping"></i> ADD TO CARD
+                <button
+                  className="addbutton"
+                  onClick={() => {
+                    handleCart(e);
+                  }}
+                >
+                  <i className="fa-solid fa-basket-shopping"></i> ADD TO CART
                 </button>
                 <div className="heartdiv">
                   <i className="fa-solid fa-heart"></i>

@@ -1,10 +1,16 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../context/productContext';
+import { Navbar } from '../Navigation/Navbar';
+import { Link } from 'react-router-dom';
 
 export const Bestseller = () => {
   const [bestseller, setseller] = useState([]);
   const [latest, setlatest] = useState([]);
   const [most, setmost] = useState([]);
+  const [cart, setCart] = useState(0);
+  const { handleCart } = useContext(ProductContext);
+  const { handleCartValue } = useContext(ProductContext);
 
   const Prodmaindiv = styled.div`
     width: 100%;
@@ -100,66 +106,7 @@ export const Bestseller = () => {
     }
   `;
 
-<<<<<<< HEAD
   useEffect(() => {
-=======
-                /* padding-top: 40%; */
-                max-width: 200px;
-                height: 150px;
-                justify-content: center;
-                text-align: center;
-            }
-            .fecthdataimg{
-         
-                margin-top: 20px;
-           
-            }
-            .imgdivdata{
-                width:40%;
-                
-             
-            }
-            .fecthdataimg{
-                width: 100px;
-                height: 100px;
-            }
-            .textdivfecth{
-                text-align: left;
-                width: 70%;
-            }
-             .textdivfecth > p{
-                height: 40px;
-                overflow: hidden;
-                font-size: 15px;
-                font-weight: 700;
-                font-family: Roboto;
-            }
-            .textdivfecth > p:hover{
-               color: #DD0285;
-               cursor: pointer;
-            }
-
-            .addtocard{
-                width: fit-content;
-
-                }
-                .onlytextdiv{
-                    border-bottom: 1px solid lightgray;
-                    text-align: left;
-                    padding-bottom: 1px;
-                }
-                .onlytextdiv>p{
-                    width: fit-content;
-                    font-size: 18px;
-                    border-bottom: 2px solid #DD0285;
-                    margin-bottom: 0px;
-                }
-    `;
-
-
-
-    useEffect(()=>{
->>>>>>> 8a05965f4309fbbfc995107551d9509b39114d29
     fetch(`https://beautibebo.herokuapp.com/products/sub/face?pagesize=3`)
       .then((response) => response.json())
       .then((actualData) => setseller(actualData));
@@ -171,18 +118,19 @@ export const Bestseller = () => {
       .then((actualData) => setmost(actualData));
   }, []);
 
-  const Bestseller = () => {
+  const Bs = () => {
     return (
       <div className="fecthdatadiv">
         <div className="onlytextdiv">
           <p>BEST SELLER</p>
         </div>
+
         {bestseller.map((e) => {
           return (
-            <div className="btnmapdata" key={e.id}>
-              <div className="fecthimg">
+            <div className="btnmapdata" key={e._id}>
+              <Link to={`/details/${e._id}`} className="fecthimg">
                 <img src={e.image} className="fecthdataimg" />
-              </div>
+              </Link>
               <div className="textdivfecth">
                 <p>{e.name}</p>
                 <div className="icondiv">
@@ -197,8 +145,13 @@ export const Bestseller = () => {
                   <span className="newprice"> ₹{e.price}</span>
                 </div>
                 <div className="addtocard">
-                  <button className="addbutton">
-                    <i className="fa-solid fa-basket-shopping"></i> ADD TO CARD
+                  <button
+                    className="addbutton"
+                    onClick={() => {
+                      handleCart(e);
+                    }}
+                  >
+                    <i className="fa-solid fa-basket-shopping"></i> ADD TO CART
                   </button>
                   <div className="heartdiv">
                     <i className="fa-solid fa-heart"></i>
@@ -241,8 +194,13 @@ export const Bestseller = () => {
                   <span className="newprice"> ₹{e.price}</span>
                 </div>
                 <div className="addtocard">
-                  <button className="addbutton">
-                    <i className="fa-solid fa-basket-shopping"></i> ADD TO CARD
+                  <button
+                    className="addbutton"
+                    onClick={() => {
+                      handleCart(e);
+                    }}
+                  >
+                    <i className="fa-solid fa-basket-shopping"></i> ADD TO CART
                   </button>
                   <div className="heartdiv">
                     <i className="fa-solid fa-heart"></i>
@@ -258,7 +216,7 @@ export const Bestseller = () => {
       </div>
     );
   };
-
+  // working on cart
   const Mostdata = () => {
     return (
       <div className="fecthdatadiv">
@@ -266,6 +224,7 @@ export const Bestseller = () => {
           <p>MOST VIEWED</p>
         </div>
         {most.map((e) => {
+          console.log(e.price);
           return (
             <div className="btnmapdata" key={e.id}>
               <div className="fecthimg">
@@ -285,8 +244,13 @@ export const Bestseller = () => {
                   <span className="newprice"> ₹{e.price}</span>
                 </div>
                 <div className="addtocard">
-                  <button className="addbutton">
-                    <i className="fa-solid fa-basket-shopping"></i> ADD TO CARD
+                  <button
+                    className="addbutton"
+                    onClick={() => {
+                      handleCart(e);
+                    }}
+                  >
+                    <i className="fa-solid fa-basket-shopping"></i> ADD TO CART
                   </button>
                   <div className="heartdiv">
                     <i className="fa-solid fa-heart"></i>
@@ -307,7 +271,7 @@ export const Bestseller = () => {
     <div>
       <Prodmaindiv>
         <Productsubdiv>
-          <Bestseller />
+          <Bs />
         </Productsubdiv>
         <Productsubdiv>
           <Latestseller />
