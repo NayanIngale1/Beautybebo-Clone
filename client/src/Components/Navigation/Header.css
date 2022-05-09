@@ -1,0 +1,211 @@
+.main-nav {
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid pink;
+}
+.main-nav-profile {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 0.9rem;
+}
+.a {
+  width: 40px;
+  height: 50%;
+  border: 1px solid grey;
+}
+.my {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.main-input {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  width: 603px;
+  margin-top: 0.9rem;
+}
+.main-input > input {
+  width: 70%;
+  outline: none;
+  border: none;
+}
+.main-input > select {
+  width: 28%;
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+}
+.main-input > button {
+  width: 9%;
+  padding: 0.4rem;
+  outline: none;
+  border: none;
+  background-color: rgb(221, 2, 133);
+}
+.main-nav-middle {
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.user-icon {
+  display: flex;
+  gap: 0.4rem;
+}
+.user-icon > div:nth-child(2) {
+  color: black;
+}
+.main-input > span {
+  margin: 4px 20px 4px 20px;
+  color: lightgray;
+}
+select > option {
+  color: lightgray;
+}
+select {
+  color: lightgray;
+}
+input {
+  color: lightgray;
+}
+.main-nav-profile > div {
+  margin-bottom: 1rem;
+}
+.like-icon {
+  width: 2.4rem;
+  border: 1px solid #666666;
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.like-icon :hover {
+  border: 1px solid transparent;
+  color: white;
+  background-color: rgb(221, 2, 133);
+}
+.user-icon-pic {
+  width: 2.4rem;
+  border: 1px solid #666666;
+
+  margin-top: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-icon :hover {
+  background-color: rgb(221, 2, 133);
+  cursor: pointer;
+}
+.main-nav-profile :nth-child(1) :hover {
+  background-color: rgb(221, 2, 133);
+  cursor: pointer;
+}
+.user-icon > span {
+  margin-top: 0.5rem;
+}
+@media screen and (max-width: 992px) {
+  .main-input select,
+  span {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .main-input select,
+  span {
+    display: none;
+  }
+  .main-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+/* ---------------- */
+#profile_div {
+  /* border: 1px solid black; */
+  height: 64px;
+  width: 250px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 95%;
+}
+#fav_div {
+  border: 1px solid black;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#fav_div:hover {
+  border: 1px solid #dd0285;
+  background-color: #dd0285;
+  color: white;
+}
+#account_div {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 30px;
+  width: 150px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+#avatar {
+  border: 1px solid #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin: 0px 5px;
+}
+#avatar:hover {
+  border: 1px solid #dd0285;
+  background-color: #dd0285;
+  color: white;
+}
+#content {
+  font-size: 85%;
+  color: #232323;
+  cursor: pointer;
+}
+#content_dropdown {
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 150px;
+  width: 150px;
+  height: 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  background-color: white;
+  color: #232323;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+#login_dropdown {
+  border-bottom: 1px solid #f5f5f5;
+  flex: 1;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+#register_dropdown {
+  /* border: 1px solid black; */
+  flex: 1;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
